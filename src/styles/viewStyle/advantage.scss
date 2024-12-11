@@ -1,0 +1,40 @@
+@import "../variables.scss";
+.advantage {
+  background-color: #050C1A;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+.advantage-content {
+  width: 1500px;
+}
+.advantage-item {
+  width: 360px;
+  height: 360px;
+}
+@media only screen and (max-width: 1800px) {
+  .advantage-content {
+    width: 1340px;
+  }
+  .advantage-item {
+    width: 320px;
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .advantage-content {
+    width: 660px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .advantage-content {
+    width: 660px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .advantage-content {
+    width: 320px;
+  }
+  .advantage-item {
+    flex: 0 0 100%;
+  }
+}

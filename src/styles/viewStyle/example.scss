@@ -1,0 +1,86 @@
+@import "../variables.scss";
+.example {
+  width: 100%;
+  padding: 80px 0;
+  
+  box-sizing: border-box;
+  margin-top: -1px;
+}
+.section-title-0 {
+  margin-bottom: 10px;
+}
+.example-item {
+  position: relative;
+  margin-bottom: 0;
+  margin-right: 8px;
+  &:last-child {
+    margin-right: 0;
+  } 
+}
+.example-img {
+  width: 479px;
+  height: 359px;
+}
+.example-img-mask {
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #3068FF, $alpha: 0.4);
+  border-radius: 15px;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.example-start-btn {  
+  padding: 9px 24px 11px 26px;
+  box-shadow: 0px 1px 2px -1px rgba(0,0,0,0.64), 
+              0px 3px 6px 0px rgba(0,0,0,0.48), 
+              0px 5px 12px 1px rgba(0,0,0,0.36);
+}
+.section-description {
+  text-align: center;
+  padding: 0 15px;
+}
+
+@media only screen and (max-width: 1800px) {
+  .example-img {
+    width: 435px;
+    height: 249px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .example-img {
+    width: 294.67px;
+    height: 169.64px;
+  }
+} 
+@media only screen and (max-width: 900px) {
+  .example-content {
+    flex-direction: column;
+  }
+  .example-item {
+    margin-right: 0;
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    } 
+  }
+  .example-img {
+    width: 594px;
+    height: 338.9px;
+  }
+} 
+@media only screen and (max-width: 600px) {
+  .example {
+    padding-bottom: 60px;
+  }
+  .section-title-0 {
+    margin-bottom: 10px;
+  }
+  .example-img {
+    width: 390px;
+    height: 222.51px;
+  }
+} 

@@ -1,0 +1,48 @@
+@import "../variables.scss";
+.software {
+  background-color: #0B0E16;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.software-content {
+  width: 1428px;
+}
+.software-item {
+  margin-top: 60px;
+  width: 148px;
+}
+.software-img {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.software-title {
+  font-size: 18px;
+  color: var(--white-color-60);
+  line-height: 25px;
+  text-align: center;
+  letter-spacing: 0.89px;
+  font-family: PingFang SC-Regular;
+}
+@media only screen and (max-width: 1300px) {
+  .software-content {
+    width: 948px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .software-content {
+    width: 469px;
+  }
+} 
+@media only screen and (max-width: 600px) {
+  .software {
+    padding-bottom: 80px;
+  }
+  .software-content {
+    width: 308px;
+  }
+} 

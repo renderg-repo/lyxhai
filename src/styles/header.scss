@@ -1,0 +1,177 @@
+@import 'variables';
+
+.header-box {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  height: 92px;
+  background-color: rgba($color: #fff, $alpha: 0.4);
+  box-sizing: border-box;
+  color: $menuText;
+  padding: 0 45px;
+  backdrop-filter: blur(10px);
+}
+
+.logo-box {
+  width: calc((100% - 500px) / 2);
+  min-width: 38px;
+}
+.header-right {
+  width: calc((100% - 500px) / 2);
+  min-width: 99px;
+  img {
+    width: 120px;
+  }
+}
+.menu-box {
+  .active {
+    color: var(--active-color);
+    font-weight: 900;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      width: 50px;
+      height: 6px;
+      border-radius: 50px;
+      background-color: var(--active-color);
+    }
+    &:hover {
+      color: var(--active-color);
+    }
+  }
+  ul {
+    li {
+      font-size: 24px;
+      // font-weight: 500;
+      line-height: 56px;
+      // height: 32px;
+      width: 125px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      color: var(--basic-text-color);
+      &:hover {
+        color: var(--active-color);
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+.logo {
+  width: 250px;
+}
+.logo-mini {
+  width: 38px;
+  height: 64px;
+}
+.right-item {
+  width: 120px;
+  // height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Source Han Sans-Mediu";
+  margin: 0;
+  &:hover {
+    color: var(--white-color-60);
+  }
+}
+.drawer-box.el-drawer {
+  background-color: rgba(0,0,0,0.85);
+  .el-drawer__header {
+    display: none;
+  }
+  .el-drawer__body {
+    padding-top: 90px;
+  }
+}
+.drawer-box {
+  width: 158px;
+  .el-menu {
+    background-color: transparent;
+    border-right: none;
+    .el-menu-item {
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(255,255,255,0.3);
+      line-height: 52px;
+      height: 52px;
+      &.is-active {
+        color: var(--active-color);
+      }
+    }
+  }
+  .drawer-icon {
+    width: 26px;
+    height: 26px;
+  }
+  .button-box {
+    padding: 0 20px;
+  }
+  .button {
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 17px;
+    color: #fff;
+  }
+}
+.drawer-header {
+  position: relative;
+}
+.register-btn {
+  border-radius: 12px;
+  line-height: 22px;
+  width: 120px;
+  // height: 24px;
+  font-family: Source Han Sans-Medium;
+}
+.user-btn {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  border-radius: 50%;
+  font-family: "Source Han Sans-Bold";
+  line-height: 32px;
+  background-color: var(--main-hover-color) !important;
+}
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  background-color: var(--dividing-line-color);
+  border-radius: 8px;
+  background-image: url('../assets/image/public/nav-icon.svg');
+  &:hover{
+    background-image: url('../assets/image/public/nav-icon-active.svg');
+  }
+  // img {
+  //   width: 90%;
+  //   height: 90%;
+  // }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .header-box {
+    padding: 0 20px;
+  }
+  .logo-box, .header-right {
+    width: calc((100% - 560px) / 2);
+  }
+  .menu-box {
+    ul {
+      li {
+        width: 80px;
+        margin: 0;
+      }
+    }
+  }
+}

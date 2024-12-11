@@ -1,0 +1,136 @@
+@import "../variables.scss";
+
+.price-detail {
+  background-image: url("../../assets/image/index/price_detail/bg-xl.png");
+  padding: 80px 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.price-detail-content {
+  width: 1300px;
+}
+.price-detail-tab {
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 20px;
+}
+.price-detail-tab-item {
+  font-size: 14px;
+  color: var(--white-color-65);
+  font-weight: 500;
+  height: 40px;
+  width: 86px;
+  text-align: center;
+  line-height: 40px;
+  position: relative;
+  transition: all .5s;
+  margin-right: 24px;
+  font-family: Source Han Sans-Medium;
+  &.active {
+    color: var(--active-color);
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      border-top: 1px solid var(--active-color);
+      transition: opacity 0.5s;
+    }
+    &:hover {
+      color: var(--active-color);
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    color: #fff;
+  }
+}
+.price-detail-box {
+  gap: 20px;
+}
+.price-detail-item {
+  width: 420px;
+  padding: 20px;
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-sizing: border-box;
+}
+.price-detail-item-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.price-detail-item-title {
+  color: var(--white-color-85);
+  font-size: 18px;
+  line-height: 25px;
+  font-family: 'PingFang SC-Regular';
+}
+.price-detail-item-content {
+  margin-top: 6px;
+  font-family: Source Han Sans-Regular;
+  p {
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 400;
+    color: var(--white-color-45);
+    margin-top: 4px;
+    // font-family: Source Han Sans-Regular;
+  }
+  span {
+    color: var(--active-color);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    // font-family: Source Han Sans-Regular;
+  }
+  .original-price {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.6);
+    // line-height: 17px;
+    text-decoration-line: line-through;
+    margin-right: 4px;
+  }
+  .price-text {
+    font-size: 24px;
+    font-weight: 300;
+    // font-family: PingFang SC-Light;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .price-detail {
+    background-image: url("../../assets/image/index/price_detail/bg-md.png");
+  }
+  .price-detail-content {
+    width: 860px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .price-detail-content {
+    width: 660px;
+  }
+  .price-detail-item {
+    width: 320px;
+  }
+} 
+@media only screen and (max-width: 600px) {
+  .price-detail {
+    padding-bottom: 60px;
+    background-image: url("../../assets/image/index/price_detail/bg-xs.png");
+  }
+  .price-detail-content {
+    width: 360px;
+  }
+  .price-detail-item {
+    width: 360px;
+  }
+} 

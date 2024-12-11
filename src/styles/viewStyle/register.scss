@@ -1,0 +1,76 @@
+
+@import '../variables';
+.register {
+  width: 100%;
+  height: 128px;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, .3);
+}
+.gift-shu {
+  width: 1px;
+  height: 30px;
+  background-color: #747474;
+}
+.register-gift-box {
+  margin-right: 46px;
+}
+.gift-active {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  color: var(--active-color);
+  margin-bottom: 12px;
+}
+.gift-desc{
+  color: #B2B2B2;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1px;
+}
+.register-input {
+  .el-input {
+    .el-input__inner {
+      background-color: #000000;
+      border: 1px solid var(--main-color);
+      border-radius: 24px 0 0 24px;
+      color: #666666;
+      width: 300px;
+      padding: 0 0 0 30px;
+      font-size: 16px;
+      font-family: Source Han Sans-Normal;
+      border-right: none;
+    }
+  }
+  .el-input-group__append {
+    background-color: var(--main-color);
+    color: var(--white-color-85);
+    border-radius: 0 24px 24px 0;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 31px 8px 27px;;
+    border: none;
+    font-family: Source Han Sans-Regular;
+    line-height: 22px;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      background: var(--main-hover-color);
+    }
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .register-gift-box {
+    margin-right: 20px;
+  }
+  .register-input {
+    .el-input {
+      .el-input__inner {
+        width: 200px;
+      }
+    }
+  }
+}
