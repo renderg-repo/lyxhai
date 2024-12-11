@@ -37,10 +37,15 @@
             </ul>
             <div class="mirror-tag-box flex-align-start flex-between" v-if="activeIndex != 2">
               <div class="mirror-tag-list">
-                <span v-for=" (value, key, index) in mirrorTags" :key="index" class="mirror-tag-item" :style="moreStyle(value, index)" @click="handleSelectTag(key, index)">
+                <div 
+                  v-for=" (value, key, index) in mirrorTags" 
+                  :key="index" 
+                  class="mirror-tag-item"
+                  :class="index == mirrorIndex ? 'mirror-tag-active' : ''" 
+                   @click="handleSelectTag(key, index)">
                   {{ key }}
-                  <i v-if="isShowTagIcon(key, index)" class="el-icon-check"></i>
-                </span>
+                  <!-- <i v-if="isShowTagIcon(key, index)" class="el-icon-check"></i> -->
+                </div>
               </div>
               <!-- <div class="mirror-tag-selected">
                 已选：{{ selectedTags }}
@@ -104,10 +109,10 @@
         <!-- 标签 -->
         <div class="mirror-tag-box mini-mirror-tag-box flex-align-start flex-between" v-if="activeIndex != 2">
           <div class="mirror-tag-list">
-            <span v-for=" (value, key, index) in mirrorTags" :key="index" class="mirror-tag-item mr10" style="margin-left: 0;" :style="moreStyle(value, index)" @click="handleSelectTag(key, index)">
+            <div v-for=" (value, key, index) in mirrorTags" :key="index" class="mirror-tag-item mr10" style="margin-left: 0;" :style="moreStyle(value, index)" @click="handleSelectTag(key, index)">
               {{ key }}
               <i v-if="isShowTagIcon(key, index)" class="el-icon-check"></i>
-            </span>
+            </div>
           </div>
         </div>
         <div class="mirror-tag-selected mb20 mini-mirror-tag-selected">
@@ -206,6 +211,7 @@ export default {
     return {
       activeIndex: 0,
       mirrorCount: 0, // 新增镜像数量
+      mirrorIndex: 0, // 新增镜像数量
       tabList: [
         {
           id: 2,
@@ -378,6 +384,7 @@ export default {
     // 选择tag标签
     handleSelectTag(key, index) {
       // 所有镜像
+      this.mirrorIndex = index
       if (index === 0) {
         this.imgLabels = [];
       } else {
