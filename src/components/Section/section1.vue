@@ -1,10 +1,17 @@
 <template>
   <!-- 性能强大 经济实惠 -->
   <div class="price-detail flex-align-center flex-column-direction">
-    <h2 class="section-title mb40">性能强大 经济实惠</h2>
+    <h2 class="section-title mb60">性能强大 经济实惠</h2>
     <div class="price-detail-content mb30">
       <div class="price-detail-tab flex-center">
-        <a class="price-detail-tab-item" v-for="(item, index) in tabList" :key="item.id" :class="{active: activeIndex == index}" @click="handleTabClick(index)">{{ item.title }}</a>
+        <a 
+          class="price-detail-tab-item" 
+          v-for="(item, index) in tabList" 
+          :key="item.id" 
+          :class="{active: activeIndex == index}" 
+          @click="handleTabClick(index)">
+          {{ item.title }}
+        </a>
       </div>
 
       <div class="price-detail-box flex-align-center flex-wrap">
@@ -40,7 +47,7 @@
         </div>
       </div>
     </div>
-    <p class="section-description">更多型号海量供应，包日包月价格更低！</p>
+    <!-- <p class="section-description">更多型号海量供应，包日包月价格更低！</p> -->
   </div>
 </template>
 

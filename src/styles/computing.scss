@@ -7,6 +7,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 200px;
 }
 
 .computing-box {
@@ -17,11 +18,11 @@
     width: 100%;
     margin-bottom: 200px;
     &:first-child {
-      margin: 0 21px 60px;
+      margin: 0 21px 200px;
       justify-content: flex-start;
     }
     &:last-child {
-      margin-bottom: 185px;
+      margin-bottom: 0;
     }
 
     .item-img-box {

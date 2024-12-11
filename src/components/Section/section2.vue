@@ -3,11 +3,13 @@
 <div class="software flex-column-direction flex-align-center">
   <div class="software-header">
     <h2 class="section-title mb20">支持全部主流镜像和插件</h2>
-    <p class="section-description">支持自定义用户镜像</p>
+    <!-- <p class="section-description">支持自定义用户镜像</p> -->
   </div>
   <div class="software-content flex-align-center flex-between flex-wrap">
-    <div v-for="(item, index) in softwareList" :key="index" class="software-item flex-align-center flex-center flex-column-direction">
-      <div class="software-img">
+    <div 
+      v-for="(item, index) in softwareList" :key="index" 
+      class="software-item">
+      <div class="software-img flex-align-center flex-center">
         <el-image :src="item.image" alt="" :lazy="true">
           <div slot="placeholder" class="image-slot">
             <img :src="item.loadImg" alt="">

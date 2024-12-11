@@ -65,7 +65,8 @@
   width: 1560px;
   position: relative;
   min-height: 796px;
-  padding-bottom: 14px;
+  // padding-bottom: 14px;
+  margin-bottom: 120px;
 }
 .mirror-search-box {
   height: 40px;
@@ -104,14 +105,14 @@
     backdrop-filter: blur(30px);
     cursor: pointer;
     display: inline-block;
-    margin-left: 40px;
+    margin-right: 40px;
     margin-bottom: 24px;
     font-family: Source Han Sans-Regular;
     &.mirror-tag-active {
       background: #3068FF;
     }
-    &:first-child {
-      margin-left: 0;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

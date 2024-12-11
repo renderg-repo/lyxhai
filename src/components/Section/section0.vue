@@ -5,10 +5,12 @@
   <div class="example-content flex-align-center mb40">
     <div class="example-item flex-align-center" @mouseenter="handleMouse(index, true)" @mouseleave="handleMouse(index, false)" v-for="(item, index) in exampleList" :key="index">
       <img class="example-img" :src="item.image" alt="">
-      <div class="example-img-mask" v-if="item.showBtn">
-        <div class="start-btn example-start-btn" @click="toPath(item.url)" @mouseenter="item.hover = true" @mouseleave="item.hover = false">
-          <span>立即开始</span>
-          <img class="start-btn-icon" :src="item.hover ? item.icon_hover_url : item.icon_url"/>
+      <div class="example-img-mask"  v-if="item.showBtn">
+        <div class="start-btn flex-align-center" @click="toPath(item.url)" @mouseenter="item.hover = true" @mouseleave="item.hover = false">
+          <span class="start-btn-text"> 立即开始 </span>
+          <div class="start-btn-icon flex-align-center flex-center">
+            <i class="el-icon-caret-right"></i>
+          </div>
         </div>
       </div>
     </div>
