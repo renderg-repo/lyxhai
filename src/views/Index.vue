@@ -11,7 +11,7 @@
     <!-- 软件 -->
     <Software></Software>
     <!-- 优势 -->
-    <Advantage></Advantage>
+    <!-- <Advantage></Advantage> -->
     <!-- 合作伙伴 -->
     <Partner :title="'合作伙伴'"></Partner>
     <!-- 底部 -->

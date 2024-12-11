@@ -1,7 +1,8 @@
 @import "../variables.scss";
 
 .price-detail {
-  background-image: url("../../assets/image/index/price_detail/bg-xl.png");
+  background: rgba(255, 255, 255, 0.50);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(255, 255, 255, 0.70) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.50) inset, 0px 0px 15px 0px rgba(255, 255, 255, 0.20) inset, 0px 15px 30px 0px rgba(255, 255, 255, 0.20) inset;
   padding: 80px 0;
   box-sizing: border-box;
   background-size: cover;
@@ -9,43 +10,37 @@
   background-position: center;
 }
 .price-detail-content {
-  width: 1300px;
+  width: 1560px;
 }
 .price-detail-tab {
   width: 100%;
-  height: 40px;
+  // height: 40px;
   box-sizing: border-box;
   border-bottom: 1px solid rgba(255,255,255,0.08);
-  margin-bottom: 20px;
+  margin-bottom: 72px;
 }
 .price-detail-tab-item {
-  font-size: 14px;
-  color: var(--white-color-65);
+  font-size: 24px;
+  color: #fff;
+  background-color: #D9D9D9;
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(255, 255, 255, 0.70) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.50) inset, 0px 0px 15px 0px rgba(255, 255, 255, 0.20) inset, 0px 15px 30px 0px rgba(255, 255, 255, 0.20) inset;
   font-weight: 500;
-  height: 40px;
-  width: 86px;
+  height: 53px;
+  width: 140px;
   text-align: center;
-  line-height: 40px;
+  line-height: 53px;
   position: relative;
   transition: all .5s;
-  margin-right: 24px;
-  font-family: Source Han Sans-Medium;
+  margin-right: 80px;
   &.active {
-    color: var(--active-color);
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      border-top: 1px solid var(--active-color);
-      transition: opacity 0.5s;
-    }
-    &:hover {
-      color: var(--active-color);
-    }
+    background: linear-gradient(270deg, rgba(55, 113, 255, 0.80) 0%, rgba(111, 173, 255, 0.80) 67.9%, rgba(137, 202, 255, 0.80) 100%);
   }
+  &:hover {
+    background: linear-gradient(270deg, rgba(55, 113, 255, 0.80) 0%, rgba(111, 173, 255, 0.80) 67.9%, rgba(137, 202, 255, 0.80) 100%);
+  
+  }
+  
   &:last-child {
     margin-right: 0;
   }
@@ -57,32 +52,47 @@
   gap: 20px;
 }
 .price-detail-item {
-  width: 420px;
-  padding: 20px;
-  background: rgba(255,255,255,0.03);
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.08);
+  width: 500px;
+  padding: 26px 30px;
+  background: rgba(48, 104, 255, 0.20);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(255, 255, 255, 0.70) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.50) inset, 0px 0px 15px 0px rgba(255, 255, 255, 0.20) inset, 0px 15px 30px 0px rgba(255, 255, 255, 0.20) inset;
+  border-radius: 15px;
   box-sizing: border-box;
+  position: relative;
+  .tag-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 24px;
+    border-radius: 0px 15px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 .price-detail-item-header {
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding-bottom: 26px;
+  border-bottom: 1px solid #3068FF;
 }
 .price-detail-item-title {
-  color: var(--white-color-85);
-  font-size: 18px;
-  line-height: 25px;
+  color: var(--basic-text-color);
+  font-size: 20px;
+  line-height: 20px;
   font-family: 'PingFang SC-Regular';
 }
 .price-detail-item-content {
-  margin-top: 6px;
+  margin-top: 10px;
   font-family: Source Han Sans-Regular;
   p {
-    font-size: 12px;
-    line-height: 17px;
+    font-size: 20px;
+    line-height: 20px;
     font-weight: 400;
-    color: var(--white-color-45);
-    margin-top: 4px;
+    color: var(--basic-text-color);
+    margin-top: 10px;
     // font-family: Source Han Sans-Regular;
   }
   span {
@@ -93,9 +103,9 @@
     // font-family: Source Han Sans-Regular;
   }
   .original-price {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
-    color: rgba(255,255,255,0.6);
+    color: #909090;
     // line-height: 17px;
     text-decoration-line: line-through;
     margin-right: 4px;

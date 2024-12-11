@@ -274,7 +274,7 @@ img {
   letter-spacing: 0.8px;
 }
 h2 {
-  text-align: center;
+  // text-align: center;
   font-size: 36px;
   font-weight: Black;
   letter-spacing: 1.8px;
@@ -294,20 +294,7 @@ h4 {
 .semibold-text {
   font-family: PingFang SC-Semibold;
 }
-.tag-icon {
-  width: 40px;
-  height: 20px;
-  line-height: 20px;
-  border-radius: 8px;
-  font-size: 12px;
-  color: var(--white-color-85);
-  font-family: Source Han Sans-Medium;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 6px;
-  box-sizing: border-box
-}
+
 .fire-icon-box {
   width: 20px;
   height: 20px;
@@ -449,19 +436,32 @@ input[type="number"] {
   }
 }
 .start-btn {
-  display: flex;
-  background: var(--main-color);
-  border-radius: 20px;
-  color: var(--white-color-85);
-  font-size: 14px;
-  font-family: Source Han Sans-Medium;
   cursor: pointer;
-  &:hover {
-    color: #fff;
-    background-color: var(--main-hover-color);
-  }
+  position: relative;
+  padding: 0 19px;
+  box-sizing: border-box;
+  width: 170px;
+  height: 68px;
+  font-size: 24px;
+  color: #0066CF;
+  font-weight: bold;
+  background: rgba(255,255,255,0.8);
+  box-shadow: inset 0px 15px 30px 0px rgba(255,255,255,0.2), inset 0px 0px 15px 0px rgba(255,255,255,0.2), inset 0px 1px 1px 0px rgba(255,255,255,0.5), inset 0px 0px 2px 0px rgba(255,255,255,0.7), 2px 2px 4px 0px rgba(0,0,0,0.1);
+  border-radius: 10px 10px 10px 10px;
   .start-btn-icon {
-    margin: 2px 0 0 6px;
+    position: absolute;
+    right: -21px;
+    width: 43px;
+    height: 43px;
+    font-size: 32px;
+    border-radius: 5px;
+    background: rgba(48, 104, 255, 0.50);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.10), 0px 0px 2px 0px rgba(255, 255, 255, 0.70) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.50) inset, 0px 0px 15px 0px rgba(255, 255, 255, 0.20) inset, 0px 15px 30px 0px rgba(255, 255, 255, 0.20) inset;
+    backdrop-filter: blur(5px);
+    color: rgba(255, 255, 255, 0.50);
+    box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.70) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.50) inset, 0px 0px 15px 0px rgba(255, 255, 255, 0.20) inset, 0px 15px 30px 0px rgba(255, 255, 255, 0.20) inset;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.10));
+    backdrop-filter: blur(30px);
   }
 }
 // 自定义断点隐藏
