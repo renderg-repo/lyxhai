@@ -1,0 +1,28 @@
+/* 引入 HelveticaNeue-Thin 字体 */
+@font-face {
+    font-family: "HelveticaNeue-Thin";
+    src: url("@/assets/fonts/HelveticaNeue-Thin.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  /* 引入 SourceHanSans 字体 */
+  @font-face {
+    font-family: "SourceHanSans";
+    src: url("@/assets/fonts/SourceHanSans.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  /* 设置全局字体为 SourceHanSans */
+  body {
+    font-family: "SourceHanSans", sans-serif;
+  }
+  
+  /* 设置数字字体为 HelveticaNeue-Thin */
+  .number {
+    font-family: "HelveticaNeue-Thin", "SourceHanSans", sans-serif;
+  }
+  

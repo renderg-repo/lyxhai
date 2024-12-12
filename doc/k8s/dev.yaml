@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hpc-web-platform
+  namespace: hpc-web-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hpc-web-platform
+  template:
+    metadata:
+      labels:
+        app: hpc-web-platform
+    spec:
+      affinity:
+        nodeAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              preference:
+                matchExpressions:
+                  - key: kubernetes.io/hostname
+                    operator: NotIn
+                    values:
+                      - k8s-node1
+      containers:
+        - name: hpc-web-platform
+          image: registry.spacehpc.com/hpc-web/hpc-web-platform-dev:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: hpc-web-platform
+  namespace: hpc-web-test
+spec:
+  type: NodePort
+  selector:
+    app: hpc-web-platform
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30801

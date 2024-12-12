@@ -1,0 +1,1339 @@
+// 提取的样式
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+:deep(.input240) {
+  .el-input__wrapper {
+    .el-input__inner {
+
+      --el-disabled-text-color: rgba(255, 255, 255, 0.15) !important;
+      --el-input-text-color: rgba(255, 255, 255, 0.85) !important;
+    }
+  }
+
+}
+
+/* 加上你自己的父选择器来增加特异性 */
+.selectPop .el-select-dropdown {
+  border-radius: 16px !important;
+  /* 换成你想要的圆角大小 */
+}
+
+.container {
+  box-shadow: none;
+  overflow: auto;
+  margin-top: 28px;
+
+  :deep(.el-checkbox__inner::after) {
+    position: absolute;
+  }
+
+  .subTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 28px;
+
+  }
+
+  .subDes {
+    font-size: 14px;
+    display: flex;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 20px;
+    margin-top: 15px;
+  }
+
+  .top-bar3 {
+    padding: 0px;
+    margin: 0px
+  }
+
+  .top-bar {
+    margin: 15px 20px;
+    padding: 20px 30px;
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.64), 0px 3px 6px 0px rgba(0, 0, 0, 0.48), 0px 5px 12px 1px rgba(0, 0, 0, 0.36);
+
+    :deep(.el-collapse) {
+      border-bottom: none !important;
+      border-top: none !important;
+
+      .el-collapse-item {
+        border-bottom: none !important;
+        border-top: none !important;
+
+        .el-collapse-item__header {
+          border-bottom: #000 !important;
+
+          --el-collapse-header-height: 28px;
+          margin-bottom: 15px;
+
+          .el-collapse-item__arrow {
+            font-size: 18px
+          }
+
+          .tag {
+            height: 28px !important;
+            display: flex;
+            width: 200px;
+            align-items: center;
+
+            .tagbox {
+              height: 20px;
+              width: 20px;
+              font-size: 12px;
+              place-content: center;
+              align-items: center;
+              font-weight: 500;
+
+              color: #ffffff;
+              text-align: center;
+              display: flex;
+              align-content: center;
+              margin-left: 6px;
+              text-transform: none;
+              position: relative;
+              left: 30px;
+              background: #2156b3;
+              border-radius: 15px 15px 15px 15px;
+            }
+
+
+
+            .active {
+              --el-collapse-header-height: 28px;
+              margin-left: 40px
+            }
+
+          }
+
+
+
+          .el-collapse-item__arrow {
+            margin: 0 8px 0px 8px;
+            position: relative;
+            left: -200px;
+            transform: rotate(90deg) !important;
+          }
+
+          .el-collapse-item__arrow.is-active {
+            transform: rotate(270deg) !important;
+          }
+        }
+
+        .el-collapse-item__wrap {
+          --el-collapse-border-color: #1d222a;
+
+          border-bottom: 0px;
+
+          .el-collapse-item__content {
+            padding-bottom: 0px;
+          }
+        }
+      }
+    }
+
+    .Couponlistbox {
+      display: flex;
+      flex-flow: column;
+
+      flex: 1;
+      overflow: hidden;
+
+
+      .Couponlist {
+        overflow-y: auto;
+        /* 允许垂直滚动 */
+        display: grid;
+        flex: 1;
+        grid-gap: 40px 30px;
+        grid-auto-rows: 155px;
+
+        .is-checked {
+          border: 1px solid #2696FF !important;
+        }
+
+        /* 设置固定的行高 */
+        :deep(.Coupons) {
+          height: 155px;
+          box-sizing: border-box;
+          position: relative;
+          padding: 20px;
+          border: 1px solid #0B1320;
+
+          .el-checkbox__input {
+            display: none
+          }
+
+          .el-checkbox__label {
+            padding: 0px;
+            align-items: start;
+            width: 100%;
+          }
+
+          .Couponstop {
+            display: flex;
+            border-bottom: 1px solid #26303e;
+            padding-bottom: 8px;
+
+            .topamount {
+              line-height: 20px;
+              display: flex;
+              font-size: 14px;
+              color: rgba(255, 255, 255, 0.6);
+
+              .pt26 {
+                padding-top: 26px;
+              }
+
+              .amounts {
+                height: 52px;
+                color: #2696ff;
+                line-height: 52px;
+                font-size: 36px;
+                margin-right: 4px;
+                display: inline-block;
+              }
+            }
+          }
+        }
+
+        .Couponsbk {
+          background: rgba(0, 0, 0, 0.35);
+        }
+
+        .Couponsbottom {
+          margin-top: 17px;
+          display: flex;
+          height: 22px;
+          line-height: 22px;
+          place-items: center;
+          --el-checkbox-checked-text-color: rgba(255, 255, 255, 0.6);
+
+          i {
+            margin-left: 4px;
+          }
+
+          .tag {
+            margin-left: auto;
+            width: 44px;
+            height: 100%;
+            border-radius: 4px 4px 4px 4px;
+            text-align: center;
+            left: 0;
+            color: rgba(255, 255, 255, 0.85);
+            background: #2156b3;
+          }
+        }
+      }
+
+      .pagination {
+        margin-bottom: 20px;
+      }
+    }
+
+    .Couponlist {
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1px));
+
+      .Coupons {
+        width: 340px;
+        display: flex;
+        flex-flow: column;
+        background: #0b1320;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.45);
+        border-radius: 10px 10px 10px 10px;
+        box-sizing: border-box;
+      }
+
+      .Couponsoverdue {
+        background-color: rgba(0, 0, 0, 0.35);
+      }
+    }
+
+
+    .tipText {
+      margin-left: 8px;
+      font-size: 14px;
+      font-family: Source Han Sans, Source Han Sans;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 20px;
+    }
+
+    .Forms {
+      display: flex;
+    }
+
+    .orderForm {
+      min-height: 84px;
+      display: flex;
+
+      .Forms {
+        border: 1px solid #26303e;
+        margin-left: -1px;
+
+        .header {
+          font-size: 14px;
+          display: flex;
+          padding: 0px 16px;
+          color: rgba(255, 255, 255, 0.45);
+          height: 42px;
+          align-items: center;
+          background-color: #E9EBEE;
+        }
+
+        .Formscontent {
+          display: flex;
+          height: 42px;
+          align-items: center;
+          padding: 0px 16px;
+        }
+      }
+    }
+
+    .couponslist {
+      flex-wrap: wrap;
+
+      .coupons {
+        font-family: Source Han Sans, Source Han Sans;
+        padding: 20px 16px;
+        box-sizing: border-box;
+        width: 340px;
+        height: 155px;
+        font-size: 14px;
+        margin: 0px 20px 20px 0px;
+        border-radius: 10px;
+        background-color: #0b1320;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.45);
+
+        .couponsheader {
+          .cb {
+            color: #2696ff;
+          }
+        }
+      }
+    }
+
+    .tab-bar {
+      position: relative;
+
+
+      .info {
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
+        display: flex;
+        align-items: center;
+
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  :deep(.el-radio.is-checked) {
+    .title {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .el-select__placeholder {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
+
+  :deep(.top-bar1) {
+    padding: 20px 30px 7px 30px;
+
+    .tabs {
+
+      .el-tabs__item {
+        margin-right: 24px !important;
+        font-weight: 700
+      }
+    }
+  }
+
+  .config {
+    .item {
+      margin: 15px 0 10px;
+    }
+
+    .gpus {
+      .gpu {
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      :deep(.el-radio) {
+        min-width: 300px;
+        border-radius: 10px;
+        min-height: 186px;
+        padding: 20px 10px;
+
+        .el-radio__input {
+          top: 22px;
+        }
+
+        .el-radio__label {
+          padding: 0px;
+          min-width: 100%;
+          min-height: 176px;
+          color: rgba(255, 255, 255, 0.85);
+          justify-content: space-evenly;
+        }
+      }
+
+      :deep(.el-radio.is-checked) {
+        .title {
+          color: rgba(255, 255, 255, 0.85);
+        }
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.6);
+        padding: 0px 10px 0px 10px;
+
+        .gpuName {
+          width: 235px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      .descript {
+        position: relative;
+        padding: 15px 10px 0 10px;
+        border-top: 1px solid #26303e;
+        font-size: 12px;
+        line-height: 22px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.45);
+
+        .tag {
+          width: 44px;
+          height: 24px;
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba(255, 255, 255, 0.85);
+          text-align: center;
+          padding: 0;
+          border-radius: 4px 4px 4px 4px;
+        }
+      }
+
+      .select {
+        :deep(.el-select__wrapper) {
+          box-shadow: none;
+          font-size: 14px !important;
+          border-radius: 8px 8px 8px 8px;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+      }
+    }
+  }
+
+  :deep(.el-select__placeholder) {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  :deep(.el-select__placeholder.is-transparent) {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .mirror2 {
+    padding: 23px 30px 10px 30px !important
+  }
+
+  .mirror {
+    margin: 15px 20px;
+    padding: 20px 30px;
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.64), 0px 3px 6px 0px rgba(0, 0, 0, 0.48), 0px 5px 12px 1px rgba(0, 0, 0, 0.36);
+
+    .baseImage {
+      border-radius: 8px;
+      padding: 12px 20px 20px 20px;
+
+      :deep(.el-select__wrapper) {
+        font-size: 12px;
+
+        .el-select-dropdown__wrap {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .el-radio {
+      :deep(.el-select__wrapper):hover {
+        box-shadow: none !important;
+      }
+
+      :deep(.el-select__wrapper) {
+        box-shadow: none !important;
+      }
+
+      :deep(.el-select) {
+        .el-select.is-focus {
+          .el-select__wrapper {
+            box-shadow: none !important;
+          }
+        }
+      }
+
+      :deep(.el-select .el-select__wrapper.is-focus) {
+        box-shadow: none !important;
+      }
+    }
+
+    .storage {
+      min-width: 25px;
+      white-space: nowrap;
+      text-align: right;
+    }
+
+    :deep(.el-tabs__header) {
+      margin: 0px;
+    }
+
+    :deep(.el-tabs__content) {
+      padding: 15px 0px 0px 0px;
+    }
+
+    .imgTitle {
+      padding: 5px 0 10px;
+      border-bottom: 1px solid #26303e;
+
+    }
+
+
+
+    :deep(.myimg .el-select__wrapper) {
+      border-radius: 8px;
+      height: 36px;
+      box-shadow: none !important;
+      background-color: #0b1320;
+    }
+
+    .content {
+      font-weight: 500;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.6);
+
+      :deep(.el-checkbox.is-checked) {
+        .el-checkbox__label {
+          color: rgba(255, 255, 255, 0.6);
+        }
+      }
+
+
+    }
+
+    .des {
+      font-weight: 400;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.3);
+      margin-top: 12px;
+    }
+
+    .tabs {
+      .marketRow {
+        padding: 26px 30px;
+        width: 920px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        height: 100px;
+        line-height: 22px;
+        background: #0b1320;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        border: 1px solid #2696ff;
+
+        .imgIcon {
+          margin-right: 24px;
+        }
+
+        .imgName {
+          font-weight: 700;
+          font-size: 16px;
+          height: 24px;
+          color: #2696ff;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .imgType {
+          font-weight: 400;
+          height: 22px;
+          margin-top: 2px;
+          display: flex;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.85);
+        }
+
+        .imgApp {
+          font-weight: 500;
+          font-size: 16px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          color: rgba(255, 255, 255, 0.6);
+        }
+
+        .app {
+          font-weight: 400;
+          font-size: 14px;
+          max-width: 100%;
+          display: inline-block;
+          height: 22px;
+          white-space: nowrap;
+          /* 保证内容在一行显示 */
+          overflow: hidden;
+          /* 隐藏超出部分 */
+          text-overflow: ellipsis;
+          /* 显示省略号 */
+          color: rgba(255, 255, 255, 0.85);
+        }
+      }
+
+      .changeBtn {
+        cursor: pointer;
+        width: 80px;
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        background: #0b1320;
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+        border-radius: 10px 10px 10px 10px;
+        font-weight: 500;
+        font-size: 14px;
+        color: #2696ff;
+      }
+
+      .changeBtn:hover {
+        color: #69b7ff;
+      }
+    }
+  }
+
+
+  .bottom-slot {
+    width: 100%;
+    height: 120px;
+
+    .bottom-bar {
+      position: fixed;
+      z-index: 2;
+      width: calc(100% - 250px);
+      left: 250px;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      height: 120px;
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.85);
+      background: #E1E2E4;
+      box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.32);
+      justify-content: space-between;
+
+      :deep(.el-input__inner) {
+        font-size: 12px !important;
+      }
+
+      .left {
+        display: flex;
+
+        .sumType {
+          margin-left: 115px;
+          display: flex;
+          align-items: center;
+
+          .input-bg {
+            margin-left: 12px
+          }
+
+          :deep(.el-input__inner) {
+            height: 32px;
+          }
+
+          :deep(.el-select__wrapper) {
+            border-radius: 8px;
+            overflow: hidden;
+            font-weight: 400;
+            background: #0b1320;
+            box-shadow: none !important;
+          }
+        }
+
+        .num {
+          display: flex;
+          align-items: center;
+          margin-left: 80px;
+          .input-bg {
+            margin-left: 12px;
+          }
+          :deep(.el-input__inner) {
+            height: 32px;
+          }
+
+          :deep(.el-select__wrapper) {
+            border-radius: 8px;
+            overflow: hidden;
+            font-weight: 400;
+            background: #0b1320;
+            box-shadow: none !important;
+          }
+
+          .num-input {
+            width: 80px;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        padding-right: 60px;
+
+        .fee {
+          display: flex;
+          padding-right: 50px;
+
+          .cred {
+            color: #df444d;
+          }
+
+          .sum {
+            display: flex;
+            flex-flow: column;
+
+            .totalCouponsAmount {
+              margin-top: auto;
+              font-size: 14px;
+              line-height: 23px;
+              padding-left: 15px;
+              font-weight: 400;
+              color: rgba(255, 255, 255, 0.85);
+            }
+          }
+
+          .solde {
+            .balance {
+              margin-top: 15px;
+              font-size: 14px;
+              font-weight: 400;
+              color: rgba(255, 255, 255, 0.85);
+            }
+          }
+        }
+
+        .creatBtn {
+          border-radius: 8px;
+          height: 36px;
+          width: 120px;
+        }
+
+        .chargeRow {
+          display: flex;
+          align-items: baseline;
+        }
+
+        .chargeBtn {
+          width: 44px;
+          height: 24px;
+          margin-left: auto;
+          background: #26303e;
+          font-weight: 400;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.85);
+        }
+
+        .chargeBtn:hover {
+          color: #69b7ff;
+        }
+      }
+    }
+  }
+}
+
+.detailBox {
+  width: 460px;
+
+  .title {
+    margin-top: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .des {
+    margin: 10px 0 0 20px;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .head {
+    margin-top: 15px;
+    background: #151f2f;
+    border-radius: 8px;
+    box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.06);
+
+    div {
+      width: 110px;
+      height: 42px;
+      box-sizing: border-box;
+      padding: 10px 16px 10px 20px;
+    }
+  }
+
+  .row {
+    .cred {
+      color: #df444d;
+    }
+
+    div {
+      min-width: 110px;
+      height: 64px;
+      box-sizing: border-box;
+      padding: 21px 16px 21px 20px;
+    }
+  }
+}
+
+:deep(.el-radio.is-bordered) {
+  width: 240px;
+  min-height: 100px;
+  position: relative;
+  background: #0b1320;
+  border: 1px solid #0b1320;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  --el-radio-input-height: 12px;
+  --el-radio-input-width: 12px;
+
+  .el-radio__input {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+  }
+
+  .el-radio__label {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0px;
+    width: 100%;
+
+    img {
+      margin-right: 8px;
+    }
+  }
+}
+:deep(.el-radio.is-disabled ) {
+  opacity: 0.5;
+}
+
+:deep(.el-scrollbar) {
+  border-radius: 8px;
+}
+
+/* 确保这段代码在 Element UI 的样式之后加载 */
+:deep(.el-el-select-dropdown) {
+  border-radius: 10px !important;
+  /* 使用你想要的值 */
+}
+
+:deep(.el-radio-button) {
+  width: 110px;
+  height: 40px;
+  margin-right: 2px;
+  background: #0b1320;
+  border-radius: 4px 4px 4px 4px;
+
+  .el-radio-button__inner {
+    width: 110px;
+    height: 40px;
+    line-height: 20px;
+    background: #0b1320;
+    border-radius: 4px 4px 4px 4px;
+  }
+}
+
+:deep(.el-tabs__nav-wrap::after) {
+  height: 1px;
+  background-color: #26303e;
+}
+
+// 弹窗提醒样式
+:deep(.noticeDialog) {
+  padding: 16px 24px 40px 24px;
+  background: #E1E2E4;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+
+  .ps {
+    display: flex;
+    margin: 20px 0px;
+    align-items: baseline;
+
+    .cf6 {
+      width: 70px;
+      text-align: right;
+      margin-right: 8px;
+    }
+  }
+
+  .el-dialog__footer {
+    padding-top: 0px;
+  }
+
+  .el-dialog__body {
+    padding: 0px 0px 0px 36px;
+  }
+
+  .noticeContent {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      margin: 6px 10px 0 0;
+    }
+
+    .toptag {
+      border-radius: 8px;
+      border: 1px solid #26303e;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .imagetypes {
+      background-color: #0b1320;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      outline: 1px solid #26303e;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 96px;
+      height: 32px;
+    }
+
+    .selected {
+      background-color: #2156b3;
+      color: #fff;
+    }
+  }
+
+  .centent {
+    margin-top: 30px;
+    height: 600px;
+    overflow-y: auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+
+    .marketRow {
+      margin-bottom: 10px;
+      padding: 26px 30px;
+      justify-content: space-between;
+      height: 48px;
+      line-height: 22px;
+      background: #0b1320;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      border: 1px solid;
+      cursor: pointer;
+
+      .imgIcon {
+        margin-right: 24px;
+      }
+
+      .imgName {
+        font-weight: 700;
+        font-size: 16px;
+        height: 24px;
+        color: #2696ff;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .imgType {
+        font-weight: 400;
+        height: 22px;
+        margin-top: 2px;
+        display: flex;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .imgApp {
+        font-weight: 500;
+        font-size: 16px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .app {
+        font-weight: 400;
+        font-size: 14px;
+        max-width: 100%;
+        display: inline-block;
+        height: 22px;
+        white-space: nowrap;
+        /* 保证内容在一行显示 */
+        overflow: hidden;
+        /* 隐藏超出部分 */
+        text-overflow: ellipsis;
+        /* 显示省略号 */
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+  }
+
+  .noticeFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .noticeFooter2 {
+    display: flex;
+    justify-content: center;
+
+    .el-button {
+      height: 36px;
+      width: 120px;
+    }
+
+    .bgBtn {
+      margin-right: 29px;
+    }
+  }
+}
+
+:deep(.imageMarketDialog) {
+  background: #E1E2E4;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+  padding: 24px 24px 17px 24px;
+
+
+  .el-input__wrapper {
+    cursor: pointer !important;
+  }
+
+  .el-input__inner {
+    cursor: pointer !important;
+  }
+
+  .ps {
+    display: flex;
+    margin: 20px 0px;
+    align-items: baseline;
+
+    .cf6 {
+      width: 70px;
+      text-align: right;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 15px 0px;
+  }
+
+  .noticeContent {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      margin: 6px 10px 0 0;
+    }
+
+    .toptag {
+      border-radius: 8px;
+      border: 1px solid #26303e;
+      display: flex;
+      overflow: hidden;
+    }
+
+    .imagetypes {
+      background-color: #0b1320;
+      color: rgba(255, 255, 255, 0.6);
+      display: flex;
+      outline: 1px solid #26303e;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 96px;
+      height: 32px;
+    }
+
+    .selected {
+      background-color: #2156b3;
+      color: #fff;
+    }
+  }
+
+  .el-dialog__footer {
+    border-top: 1px solid rgba(38, 48, 62);
+  }
+
+  .centent {
+    margin-top: 15px;
+    height: 600px;
+    overflow-y: auto;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+
+    .marketRow {
+      margin-top: 10px;
+      padding: 26px 30px;
+      justify-content: space-between;
+      height: 48px;
+      line-height: 22px;
+      background: #0b1320;
+      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      border: 1px solid;
+      cursor: pointer;
+
+      .imgIcon {
+        margin-right: 24px;
+      }
+
+      .imgName {
+        font-weight: 700;
+        font-size: 16px;
+        height: 24px;
+        color: #2696ff;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      .imgType {
+        font-weight: 400;
+        height: 22px;
+        margin-top: 2px;
+        display: flex;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      .imgApp {
+        font-weight: 500;
+        font-size: 16px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .app {
+        font-weight: 400;
+        font-size: 14px;
+        max-width: 100%;
+        margin-top: 2px;
+        display: inline-block;
+        height: 22px;
+        white-space: nowrap;
+        /* 保证内容在一行显示 */
+        overflow: hidden;
+        /* 隐藏超出部分 */
+        text-overflow: ellipsis;
+        /* 显示省略号 */
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+  }
+
+  .noticeFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .noticeFooter2 {
+    display: flex;
+    justify-content: center;
+
+    .bgBtn {
+      margin-right: 29px;
+    }
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+    /* Chrome Safari */
+  }
+
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+
+}
+
+:deep(.renewalDialog) {
+  padding: 16px 24px 40px 24px;
+  background: #E1E2E4;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+
+  .ps {
+    display: flex;
+    margin: 20px 0px;
+    align-items: baseline;
+
+    .cf6 {
+      width: 112px;
+      text-align: right;
+    }
+  }
+
+  .el-dialog__body {
+    padding: 0px 44px 0px 44px;
+  }
+
+  .noticeFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .el-dialog__footer {
+    padding: 0px;
+  }
+
+  .noticeFooter2 {
+    display: flex;
+    justify-content: center;
+
+    .el-button {
+      height: 36px;
+      width: 120px;
+    }
+
+    .bgBtn {
+      margin-right: 29px;
+    }
+  }
+}
+
+:deep(.balanceDialog) {
+  padding: 16px 24px 16px 24px;
+  background: #E1E2E4;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+
+  .el-dialog__header {
+    display: flex;
+    align-items: center;
+  }
+
+  .el-dialog__body {
+    padding: 20px 44px 0px 36px;
+  }
+
+  .el-dialog__footer {
+    padding: 0px;
+    padding-top: 20px;
+  }
+
+}
+
+:deep(.el-dialog__header) {
+  margin-right: 0;
+  border-bottom: 1px solid #26303e;
+  padding: 0px 16px 16px 0px;
+}
+
+:deep(.el-dialog__title) {
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 24px;
+  font-family: Source Han Sans, Source Han Sans;
+  text-transform: none;
+  font-style: normal;
+}
+
+.cred {
+  color: #df444d;
+}
+
+:deep(.el-input-number__decrease) {
+  display: none;
+}
+
+:deep(.el-input-number__increase) {
+  display: none;
+}
+
+:deep(.el-input-number.is-controls-right .el-input__wrapper) {
+  padding-left: 12px !important;
+}
+
+.el-input-number {
+  width: 240px;
+
+  :deep(.el-input__inner) {
+    text-align: left !important;
+  }
+}
+
+:deep(.input-bg .el-input__inner::-webkit-input-placeholder) {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+:deep(.el-input__wrapper) {
+  border-radius: 8px;
+}
+
+.mirror-tag-box {
+  margin-bottom: 10px;
+
+  .mirror-tag-item {
+    height: 22px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0 8px;  
+    border-radius: 8px;
+    background-color: #0B1320;
+    border: 1px solid #15395B;
+    cursor: pointer;
+    // display: inline-block;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: Source Han Sans-Regular;
+  }
+}
+
+.mirror-tag-selected {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);;
+  line-height: 20px;
+}
+
+.mirror-el-skeleton {
+  .el-skeleton.is-animated .el-skeleton__item {
+    background: linear-gradient(90deg, #0d1625 15%, #0d1625 37%, #101d30 60%);
+    background-size: 400% 100%;
+    -webkit-animation: el-skeleton-loading 1.4s ease infinite;
+    animation: el-skeleton-loading 1.4s ease infinite;
+  }
+}

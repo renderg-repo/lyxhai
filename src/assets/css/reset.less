@@ -1,0 +1,574 @@
+html,
+body {
+  // background: #1d222a;
+}
+a {
+  text-decoration: none;
+}
+
+
+.el-button.is-link > span {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.el-button.is-link > span:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+.el-button.el-button--primary.is-link > span {
+  color: rgba(38, 150, 255, 1);
+}
+.el-button.el-button--primary.is-link.is-disabled > span {
+  color: #1F3B6D;
+}
+
+.el-button.is-link.el-button--primary > span:hover {
+  color: rgba(105, 183, 255, 1);
+}
+.el-button.is-link.el-button--primary.is-disabled > span:hover {
+  color: #1F3B6D;
+}
+.el-select__popper.selectPop {
+  border-radius: 8px;
+}
+
+.el-picker__popper.el-popper {
+  border: none !important;
+  border-radius: 6px;
+  background-color: #0b1320 !important;
+
+  .el-picker-panel {
+    background-color: #0b1320;
+  }
+}
+
+.el-tabs__item.is-active {
+  // color: rgba(38, 150, 255, 1) !important;
+}
+.el-tabs__item:hover {
+  color: var(--el-color-primary) !important;
+}
+
+.select_none {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.el-dropdown__popper.el-popper {
+  border-color: #1d222a !important;
+  background: #1d222a !important;
+  right: 30px !important;
+  top: 71px !important;
+  width: 280px;
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+
+  .el-dropdown-menu__item:not(.is-disabled):focus {
+    background-color: rgba(33, 86, 179, 1) !important;
+    font-weight: 700;
+    color: #ffffff !important;
+    border-radius: 8px;
+    overflow: hidden;
+    // padding: 0 20px 0 14px;
+  }
+
+  .top {
+    display: flex;
+    align-items: center;
+    padding: 25px 15px 16px 0;
+    border-bottom: 1px solid #26303e;
+    margin-bottom: 15px;
+
+    .portrait {
+      width: 32px;
+      height: 32px;
+      display: block;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .info {
+      margin-left: 15px;
+
+      .title {
+        font-size: 12px;
+        font-weight: 700;
+        height: 20px;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 2px;
+      }
+
+      .desc {
+        font-size: 12px;
+        font-weight: 700;
+        width: 145px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        color: rgba(255, 255, 255, 0.45);
+      }
+    }
+  }
+
+  .list {
+    padding: 0 15px 10px;
+    box-sizing: border-box;
+    background: #1d222a !important;
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      display: block;
+      margin-right: 10px;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+      // padding: 10px 0;
+
+      .title {
+        font-size: 14px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.85);
+      }
+
+      &:last-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+.el-date-editor .el-range-separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+.el-range-separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+.el-popper.is-light .el-popper__arrow::before {
+  // opacity: 0;
+}
+
+.el-popper__arrow {
+  display: none;
+}
+
+.el-table__row {
+  color: rgba(255, 255, 255, 0.85);
+
+  .del_text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #df444d;
+  }
+
+  &:hover {
+    // background: #26303E !important;
+    color: #fff;
+
+    .del_text {
+      color: #ff5761;
+      cursor: pointer;
+    }
+  }
+}
+
+.el-breadcrumb__item {
+  height: 14px;
+}
+
+::placeholder {
+  color: rgba(0, 0, 0, 0.3) !important;
+}
+
+.code_btn {
+  &:hover {
+    background: #1d222a !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+  }
+}
+.generalDialog {
+  padding: 16px 0px 30px 0px !important;
+  --el-text-color-regular: rgba(225, 225, 225, 0.85);
+  .el-dialog__header {
+    border-bottom: 1px solid #26303e;
+    .el-dialog__title {
+      padding-left: 24px;
+      line-height: 22px;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+.el-dialog {
+  border-radius: 10px !important;
+  background: #1d222a;
+  --el-dialog-bg-color: #1d222a !important;
+  box-shadow: 0px 3px 6px -1px rgba(0, 0, 0, 0.48),
+    0px 6px 16px 2px rgba(0, 0, 0, 0.32), 0px 9px 28px 8px rgba(0, 0, 0, 0.2);
+}
+.no-header-dialog .el-dialog__header {
+  display: none;
+}
+.el-button.is-text:not(.is-disabled).is-has-bg:hover {
+  --el-fill-color: #1a2940;
+}
+.el-dialog__close.el-icon {
+  font-size: 24px !important;
+  font-weight: bolder;
+  // width: 24px !important;
+  // height: 24px !important;
+}
+.el-dialog__headerbtn:focus .el-dialog__close,
+.el-dialog__headerbtn:hover .el-dialog__close {
+  --el-color-primary: rgba(255, 255, 255, 0.85);
+}
+
+.el-dialog__headerbtn {
+  right: 10px !important;
+  top: 5px !important;
+}
+.accountSecurity,
+.secretKeyManage {
+  .el-input__wrapper {
+    &:hover {
+      box-shadow: 0 0 0 1px #2156b3 inset !important;
+    }
+  }
+}
+
+.el-select-dropdown__list {
+  flex: 1;
+}
+
+.el-form-item.is-error .el-input__wrapper {
+  box-shadow: 0 0 0 1px #d63939 inset !important;
+}
+
+.submit_btn {
+  color: rgba(255, 255, 255, 0.85) !important;
+  &:hover {
+    background: #3070e1 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+
+  &:active {
+    background: #214b96 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+}
+
+.ssh {
+  .btn {
+    &:hover {
+      background: #3070e1 !important;
+      color: #ffffff !important;
+    }
+
+    &:active {
+      background: #2156b3 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+  }
+}
+
+.ssh {
+  .close_btn {
+    &:hover {
+      background: #1a2940 !important;
+      color: #ffffff !important;
+    }
+  }
+
+  .confirm_btn {
+    &:hover {
+      background: #3070e1 !important;
+      color: #ffffff !important;
+    }
+  }
+}
+
+.accountSecurity {
+  .dialog_footer {
+    .close_btn {
+      &:hover {
+        background: #000 !important;
+        color: #ffffff !important;
+        border-color: rgba(255, 255, 255, 0.3) !important;
+      }
+    }
+
+    .confirm_btn {
+      &:hover {
+        background: #3070e1 !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+
+.secretKeyManage {
+  .create_btn {
+    background: #2156b3 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    border-color: none !important;
+    border: none !important;
+
+    &:hover {
+      background: #3070e1 !important;
+      color: #ffffff !important;
+      border-color: none !important;
+      border: none !important;
+    }
+
+    &:active {
+      background: #214b96 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+      border-color: none !important;
+      border: none !important;
+    }
+  }
+
+  .del_btn {
+    &:hover {
+      background: #000 !important;
+      color: #ffffff !important;
+      border-color: rgba(255, 255, 255, 0.3) !important;
+    }
+
+    &:active {
+      background: #000 !important;
+      color: rgba(255, 255, 255, 0.85) !important;
+    }
+  }
+
+  .dialog_footer {
+    .close_btn {
+      &:hover {
+        background: #1a2940 !important;
+        color: #ffffff !important;
+        border: none !important;
+      }
+
+      &:active {
+        background: #0b1320 !important;
+        color: rgba(255, 255, 255, 0.85) !important;
+      }
+    }
+
+    .confirm_btn {
+      &:hover {
+        background: #3070e1 !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+}
+
+.code_btn {
+  &:hover {
+    background: #000 !important;
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  &:active {
+    background: #000 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+  }
+}
+
+.form {
+  .el-checkbox__input.is-checked .el-checkbox__inner {
+    border: none !important;
+    background: #2696ff !important;
+  }
+}
+
+input:-internal-autofill-selected {
+  background-clip: text;
+}
+
+.refresh {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b1320;
+  border-radius: 4px 4px 4px 4px;
+
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.6);
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+.refresh:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.refresh:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.refresh:active {
+  color: rgba(255, 255, 255, 0.6);
+}
+////按钮分区///////
+//链接文字
+.linkbtn {
+  color: #2696ff;
+  cursor: pointer;
+}
+.linkbtn:hover {
+  color: #69b7ff;
+}
+
+//危险按钮
+.warningbtn {
+  --el-color-primary: #df444d;
+  --el-button-hover-border-color: #ff5761;
+  --el-color-primary-light-3: #ff5761;
+  --el-color-primary-dark-2: #992c32;
+  border-radius: 4px 4px 4px 4px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 22px;
+}
+.warningbtn:hover {
+  --el-color-primary: #ff5761;
+  color: #ffffff;
+  cursor: pointer;
+}
+.warningtxtbtn {
+  color: #df444d;
+}
+.warningtxtbtn:hover {
+  color: #ff5761;
+}
+.warningtxtbtn:active {
+  color: #992c32;
+}
+// primarybtn 主要按钮
+
+.primarybtn {
+  background: #2156b3;
+  border-color: #2156b3 !important;
+  cursor: pointer;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.primarybtn:hover {
+  background: #3070e1 !important;
+  border-color: #3070e1 !important;
+  color: #fff !important;
+}
+
+.primarybtn:active {
+  background: #2156b3 !important;
+  border-color: #2156b3 !important;
+}
+.universalMediumbtn {
+  width: 108px;
+  height: 36px;
+  border-radius: 4px;
+}
+
+.ghostbtn {
+  --el-border-color: rgba(255, 255, 255, 0.15);
+  --el-button-hover-bg-color: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.ghostbtn:hover {
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+.secondarybtnlight {
+  background: #26303e;
+  border-color: #26303e !important;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.secondarybtnlight:hover {
+  background: #1a2940 !important;
+  border-color: #1a2940 !important;
+  color: #fff !important;
+}
+
+.secondarybtnlight:active {
+  background: #0b1320 !important;
+  border-color: #0b1320 !important;
+}
+
+.secondarybtndark {
+  background: #0b1320;
+  border-color: #0b1320 !important;
+  border-radius: 4px;
+  color: #2696ff !important;
+}
+.secondarybtndark:hover {
+  background: #0b1320 !important;
+  border-color: #0b1320 !important;
+  color: #69b7ff !important;
+}
+
+.flex {
+  display: flex !important;
+}
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
+.flex-align-end {
+  display: flex;
+  align-items: flex-end;
+}
+.flex-align-start {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-around {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-column-direction {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-row-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}

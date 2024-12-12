@@ -1,40 +1,41 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
-import store from './store'
-import './styles/index.scss';
-import axios from 'axios'
-import qs from 'qs'
-import api from './assets/js/api.js'
-import config from "./assets/js/config.js";
+import { createApp } from "vue";
+import App from "./App.vue";
+import pinia from "./store";
+import router from "./routers/routes";
 
-import MetaInfo from 'vue-meta-info'
-Vue.use(MetaInfo)
+import "animate.css";
+import 'element-plus/dist/index.css'
+import 'element-plus/theme-chalk/dark/css-vars.css'
 
-import animated from 'animate.css';
-Vue.use(animated)
+import "@/assets/css/global_reset.css";
+import "@/assets/css/reset.less";
+import "@/assets/css/refine.less";
 
-import ElementUI from 'element-ui'
-Vue.use(ElementUI)
-// Vue.use(Swiper)
-import 'element-ui/lib/theme-chalk/display.css';
-import 'element-ui/lib/theme-chalk/index.css'
+import ElementPlus from 'element-plus'
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 
-Vue.prototype.$axios= axios
-Vue.prototype.$qs = qs
-Vue.prototype.$api = api
-Vue.config.productionTip = false
-Vue.prototype.$config = config;
+import '@/assets/fonts/style.css'
+import '@/assets/fonts/font.css'
+// vue-simple-uploader
+import uploader from 'vue-simple-uploader'
+import 'vue-simple-uploader/dist/style.css'
+import { Icon } from '@iconify/vue'
 
-router.beforeEach((to, from, next) => {
-  window.document.title = to.meta.title == undefined?'龙游星海-政企算力GPU平台-租显卡选星海智算':to.meta.title
-  window.scrollTo(0,0)
-  next();
-})
+import VueCountdown from '@chenfengyuan/vue-countdown';
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+const app = createApp(App);
+app.use(pinia);
+app.use(router);
+app.use(uploader)
+app.use(ElementPlus, {
+    locale: zhCn,
+});
+app.component('Icon', Icon)
+app.component(VueCountdown.name, VueCountdown);
 
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+    app.component(key, component)
+}
+
+app.mount("#app");

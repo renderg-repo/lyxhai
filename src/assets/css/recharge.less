@@ -1,0 +1,556 @@
+.recharge {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 20px 30px 20px 30px;
+  margin: 0px 20px 20px 20px;
+  height: calc(100% - 20px);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+
+  .title {
+    font-size: 18px;
+    height: 28px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 26px;
+  }
+
+  .account {
+    display: flex;
+    align-items: center;
+
+    .balance {
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+
+      height: 100%;
+    }
+
+    .img_div {
+      width: 110px;
+      height: 110px;
+      margin: 30px 30px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .img {
+      margin: 24px;
+      width: 64px;
+      height: 64px;
+    }
+
+    .num_div {
+      display: flex;
+      align-items: end;
+
+      .num {
+        margin-right: 10px;
+        font-size: 30px;
+        line-height: 34px;
+        font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+        font-weight: 400;
+        color: #2696ff;
+      }
+    }
+  }
+
+  :deep(.tabs) {
+    margin-left: 30px;
+
+    .el-tabs__content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    // 线上充值样式
+    .online {
+      .amount {
+        .el-radio__label {
+          color: #ffffff;
+          font-size: 24px;
+          padding-left: 18px;
+          margin-top: 10px
+        }
+
+        .num {
+          font-size: 36px;
+          line-height: 35px;
+          font-weight: 400;
+          color: #ffffff;
+        }
+      }
+
+      .other {
+        .el-input__wrapper {
+          background-color: #0b1320;
+          width: 320px;
+        }
+
+        .amountinput {
+          --el-component-size: 36px;
+          width: 320px;
+        }
+
+        .is-error {
+          --el-input-border-color: red;
+          --el-border-color-hover: red;
+          --el-input-focus-border: red;
+          --el-input-focus-border-color: red
+        }
+      }
+
+      .tip {
+        height: 18px;
+        margin-left: 90px;
+        font-size: 12px;
+        color: #FF4A4A;
+        margin-top: 4px;
+        margin-bottom: 25px;
+      }
+
+      .payway {
+        .img {
+          margin-top: 12px;
+          margin-left: 10px;
+        }
+
+        .el-radio {
+          margin-right: 60px;
+        }
+      }
+
+      .primarybtn {
+        width: 319px;
+        height: 40px;
+        line-height: 40px;
+        border-color: #2156b3;
+        background: #2156b3;
+        border-radius: 8px 8px 8px 8px;
+        font-size: 16px;
+        font-family: Source Han Sans CN-Bold, Source Han Sans CN;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.85);
+        margin-top: 40px;
+      }
+    }
+
+    // 线上充值样式 end
+    // 线下pane样式
+    .offline {
+      .title {
+        margin: 30px 0 20px;
+        font-size: 18px;
+        font-weight: 700;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .card {
+        width: 720px;
+        height: 240px;
+        box-sizing: border-box;
+        padding: 41px 70px 42px 40px;
+        background: #151b24;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+        font-size: 18px;
+        font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.85);
+
+        .eopy {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 4px;
+        }
+      }
+
+      .info {
+        position: relative;
+
+        .lh26 {margin-bottom: 15px}
+      }
+
+      .copy_btn {
+        position: absolute;
+        top: 41px;
+        right: 70px;
+      }
+
+      .phone_card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .primarybtn {
+        width: 80px;
+        height: 40px;
+        margin-left: 20px;
+      }
+
+      .sended {
+        display: flex;
+        align-items: center;
+        line-height: 26px;
+        font-size: 18px;
+        font-weight: 400;
+
+        img {
+          margin-right: 12px;
+        }
+      }
+    }
+
+    // 线下pane样式 end
+    .rechargeList {
+      .rechargeTable {
+        margin-top: 15px;
+
+        .el-table th.el-table__cell {
+          background: #0b1320;
+
+          .cell {
+            color: rgba(255, 255, 255, 0.45);
+          }
+        }
+
+        .filter {
+          .filterLable {
+            margin-right: 10px;
+          }
+
+          .check {
+            color: rgba(38, 150, 255, 1);
+            font-weight: 500;
+          }
+        }
+      }
+
+      .el-pagination__goto {
+        display: none;
+      }
+
+      .pagination {
+        margin-top: 20px;
+        // margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        .el-input__wrapper {
+          background: #0b1320;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .voucher {
+      overflow-y: auto;
+
+      .Couponlistbox {
+        display: flex;
+        flex-flow: column;
+        margin-top: 20px;
+        flex: 1;
+        overflow: hidden;
+
+        /* 防止溢出 */
+        .Couponlist {
+          overflow-y: auto;
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1;
+          grid-gap: 40px 30px;
+
+
+          /* 设置固定的行高 */
+          .Coupons {
+            padding: 20px 20px 16px 20px;
+            height: 185px;
+
+            .Couponstop {
+              display: flex;
+              border-bottom: 1px solid #26303e;
+              padding-bottom: 10px;
+
+              img {
+                margin-right: 8px;
+                margin-top: 5px;
+              }
+
+              .topamount {
+                line-height: 17px;
+                display: flex;
+                justify-content: space-between;
+                font-size: 12px;
+                color: rgba(255, 255, 255, 0.6);
+              }
+            }
+          }
+
+          .Couponsbottom {
+            width: 100%;
+            display: flex;
+
+            .remainAmount {
+              margin-top: 6px;
+              text-align: center;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+              position: relative;
+              left: 50%;
+              transform: translate(-50%, 0%);
+              .sp {
+                color: #2696ff;
+              }
+
+              .sp3 {
+                color: rgba(38, 150, 255, 0.65);
+              }
+
+              .sp4 {
+                margin-right: 20px;
+              }
+
+              .sp2 {
+                font-size: 30px;
+                display: inline-block;
+                line-height: 33px;
+                margin-top: 20px;
+              }
+            }
+
+            .imgbox {
+              width: 86px;
+              margin-left: 10px;
+              height: 86px;
+            }
+          }
+        }
+
+        .pagination {
+          // margin-bottom: 20px;
+        }
+
+        .prompt {
+          position: absolute;
+          left: 49%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+
+    .coupons {
+      .Couponlistbox {
+        display: flex;
+        flex-flow: column;
+        margin-top: 60px;
+        flex: 1;
+        overflow: hidden;
+
+        /* 防止溢出 */
+        .Couponlist {
+          overflow-y: auto;
+          /* 允许垂直滚动 */
+          display: flex;
+          flex-wrap: wrap;
+          flex: 1;
+          grid-gap: 40px 30px;
+          grid-auto-rows: 155px;
+
+          /* 设置固定的行高 */
+          .Coupons {
+            height: 155px;
+            position: relative;
+            padding: 20px;
+
+            .Couponstop {
+              display: flex;
+              border-bottom: 1px solid #26303e;
+              padding-bottom: 8px;
+
+              .topamount {
+                line-height: 20px;
+                display: flex;
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.6);
+
+                .pt26 {
+                  padding-top: 26px;
+                }
+
+                .amounts {
+                  height: 52px;
+                  color: #2696ff;
+                  line-height: 52px;
+                  font-size: 36px;
+                  margin-right: 4px;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+
+          .Couponsbk {
+            background: rgba(0, 0, 0, 0.35);
+          }
+
+          .maskLayer {
+            position: absolute;
+            /* 设置绝对定位 */
+            width: 340px;
+            height: 155px;
+            top: 0;
+            left: 0;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.35);
+
+            .imgbox {
+              display: flex;
+              height: 100%;
+              justify-content: center;
+              place-items: center;
+            }
+          }
+
+          .Couponsbottom {
+            margin-top: 17px;
+            display: flex;
+            height: 22px;
+            line-height: 22px;
+            place-items: center;
+
+            i {
+              margin-left: 4px;
+            }
+
+            .tag {
+              margin-left: auto;
+              width: 44px;
+              height: 100%;
+              border-radius: 4px 4px 4px 4px;
+              text-align: center;
+              background: #2156b3;
+            }
+          }
+        }
+
+        .pagination {
+          margin-bottom: 20px;
+        }
+      }
+
+      .prompt {
+        position: absolute;
+        left: 49%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .descript {
+      p {
+        line-height: 26px;
+      }
+    }
+
+    .Coupontop {
+      margin-top: 20px;
+      display: flex;
+      height: 36px;
+    }
+
+    .Couponlist {
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1px));
+
+      .Coupons {
+        width: 340px;
+        display: flex;
+        flex-flow: column;
+        background: #0b1320;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.45);
+        border-radius: 10px 10px 10px 10px;
+        box-sizing: border-box;
+      }
+
+      .Couponsoverdue {
+        background-color: rgba(0, 0, 0, 0.35);
+      }
+    }
+  }
+}
+
+:deep(.dialog) {
+ padding: 15px 20px;
+
+  .info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    height: 450px;
+    text-align: center;
+
+    .pay {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .wxpay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    padding-top: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: Source Han Sans CN-Regular, Source Han Sans CN;
+
+    .img {
+      width: 150px;
+      margin-bottom: 50px;
+    }
+
+    .qr {
+      margin-bottom: 20px;
+      padding: 15px;
+      height: 180px;
+      width: 180px;
+      box-sizing: border-box;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+
+      .code {
+        height: 150px;
+        width: 150px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  .paySuccess {
+    // display: flex;
+    // justify-content: center;
+    text-align: center;
+
+    .icon {
+      font-size: 60px;
+      color: RGBA(73, 170, 25, 1);
+      margin-right: 24px;
+    }
+
+    .text {
+      margin: 30px 0 50px;
+      font-size: 24px;
+      font-family: Source Han Sans CN-Medium, Source Han Sans CN;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+}

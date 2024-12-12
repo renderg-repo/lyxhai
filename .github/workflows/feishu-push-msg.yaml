@@ -1,0 +1,29 @@
+name: feishu_push_message
+on:
+  push:
+    branches:
+      - Master
+      - Develop
+      - Hotfix
+      -
+jobs:
+  test_msg_type_post_by_using_bin_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Send feishu message
+        env:
+          ACTIONS_FEISHU_TAG: 'v1.3.1'
+          INPUT_WEBHOOK: "${{ secrets.FEISHU_URL }}"
+          INPUT_MESSAGE_TYPE: post
+          INPUT_TITLE: "v.spacehpc.com代码推送通知"
+          INPUT_CONTENT: |
+            Author: ${{ github.event.head_commit.author.name }}
+            Time: ${{ github.event.head_commit.timestamp }}
+            Branch: ${{ github.ref_name }}
+            Commit: ${{ github.event.head_commit.message }}
+            ${{ github.event.head_commit.url }}
+        run: |
+          wget -q https://github.com/xiachufang/actions-feishu/releases/download/${{ env.ACTIONS_FEISHU_TAG }}/linux-amd64-actions-feishu.tar.gz
+          tar zxf linux-amd64-actions-feishu.tar.gz feishu
+          ./feishu

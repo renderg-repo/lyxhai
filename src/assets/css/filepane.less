@@ -1,0 +1,547 @@
+.disabled {
+  opacity: 1;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.pane_container {
+  height: inherit;
+  margin-top: 10px;
+
+  .oprow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+    height: 22px;
+    line-height: 20px;
+
+    .search {
+      display: flex;
+
+      img {
+        margin: 0 20px;
+      }
+
+      .refresh-btn {
+        padding: 5px 10px;
+        color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(11, 19, 32, 1);
+        height: 32px;
+        width: 32px;
+      }
+
+      .refresh-btn:hover {
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+
+    :deep(.el-breadcrumb__inner) {
+      font-size: 12px;
+      font-weight: 400;
+      // color: rgba(255,255,255,0.6);
+    }
+
+    :deep(.el-checkbox__label) {
+      font-size: 12px;
+      font-weight: 400;
+      // color: rgba(255,255,255,0.6);
+    }
+  }
+
+  :deep(.el-upload-dragger) {
+    padding: 0;
+  }
+
+  .drop-border {
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+  }
+
+  .no-items {
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+  }
+
+  .pane_content {
+    cursor: pointer;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .overDrop {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+
+      .zhegai {
+        position: absolute;
+        top: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .upIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 64px;
+        height: 64px;
+        margin-bottom: 30px;
+        border-radius: 50%;
+        background: #3070e1;
+      }
+    }
+
+    .upOperate {
+      position: absolute;
+      top: 242px;
+      left: 635px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+
+      .dropText {
+        font-size: 18px;
+        font-weight: 400;
+        height: 28px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .or {
+        margin: 30px 0;
+        font-size: 14px;
+        font-weight: 400;
+        height: 22px;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .actions {
+        display: flex;
+        text-align: center;
+
+        .action {
+          width: 90px;
+          height: 100px;
+          background: #26303e;
+          border-radius: 8px 8px 8px 8px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 0.6);
+
+          img {
+            margin-bottom: 10px;
+          }
+        }
+
+        .action:hover {
+          background: #1a2940;
+        }
+
+        .hoverImg1:hover {
+          img {
+            width: 24px;
+            height: 24px;
+            content: url("@/assets/images/filetransfer/newChecked.svg");
+          }
+        }
+
+        .hoverImg2:hover {
+          img {
+            width: 24px;
+            height: 24px;
+            content: url("@/assets/images/filetransfer/upfileChecked.svg");
+          }
+        }
+
+        .hoverImg3:hover {
+          img {
+            width: 24px;
+            height: 24px;
+            content: url("@/assets/images/filetransfer/upfilesChecked.svg");
+          }
+        }
+      }
+    }
+
+    .plus {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      background: #2156b3;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.45);
+    }
+
+    .plusopen {
+      bottom: 300px;
+    }
+
+    .plusopen2 {
+      bottom: 70px;
+    }
+
+    .table {
+      height: 100%;
+
+      :deep(.el-table__row:hover .el-checkbox__inner) {
+        // border: 2px solid #2696ff;
+      }
+
+      .name {
+        display: flex;
+
+        img {
+          margin-right: 17px;
+        }
+      }
+
+      .hoverMod {
+        display: flex;
+
+        .seat {
+          width: 18px;
+          height: 23px;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .hoverMod {
+        .hoverMore {
+          display: none;
+        }
+
+        .hoverMorenone {
+          display: none;
+        }
+
+        .hoverMore:hover {
+          color: #2696ff;
+        }
+      }
+
+      .el-table__row:hover {
+        .hoverMore {
+          display: block;
+        }
+      }
+    }
+
+    .iconBar {
+      display: flex;
+      position: absolute;
+      z-index: 3;
+      bottom: 10%;
+      left: 38%;
+      padding: 16px 30px;
+      background: #0b1320;
+      border-radius: 10px 10px 10px 10px;
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+
+      img {
+        margin-right: 30px;
+      }
+
+      .noMargin {
+        margin: 0;
+      }
+
+      .hoverDownload:hover {
+        width: 18px;
+        height: 18px;
+        content: url("@/assets/images/filetransfer/downloadHover.svg");
+      }
+
+      .hoverMove:hover {
+        width: 18px;
+        height: 18px;
+        content: url("@/assets/images/filetransfer/moveHover.svg");
+      }
+
+      .hoverCopy:hover {
+        width: 18px;
+        height: 18px;
+        content: url("@/assets/images/filetransfer/copyHover.svg");
+      }
+
+      .hoverRename:hover {
+        width: 18px;
+        height: 18px;
+        content: url("@/assets/images/filetransfer/renameHover.svg");
+      }
+
+      .hoverdelete:hover {
+        width: 18px;
+        height: 18px;
+        content: url("@/assets/images/filetransfer/deleteHover.svg");
+      }
+
+      .hoverMore:hover {
+        width: 18px;
+        height: 18px;
+        content: url("@/assets/images/filetransfer/moreHover.svg");
+      }
+
+      .hoverClose:hover {
+        width: 18px;
+        height: 18px;
+        content: url("@/assets/images/filetransfer/closeHover.svg");
+      }
+    }
+  }
+}
+
+:deep(.el-checkbox__input.is-checked + .el-checkbox__label) {
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+:deep(.el-table__header-wrapper .el-table-column--selection)>.cell {
+  border: none;
+}
+
+// dialog样式
+:deep(.fileDialog) {
+  background: #E1E2E4;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+  border-radius: 10px 10px 10px 10px;
+  --el-dialog-padding-primary: 15px 20px;
+
+  .el-dialog__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .el-dialog__body {}
+
+  .el-dialog__header {
+    margin-bottom: 15px;
+  }
+
+  .ls {
+    height: 476px;
+    overflow: auto;
+    padding: 5px 0px;
+
+    .lsitem {
+      display: flex;
+      align-items: center;
+      padding: 10px 10px;
+      height: 46px;
+      box-sizing: border-box;
+
+      img {
+        margin-right: 17px;
+        height: 24px;
+        width: 24px;
+      }
+
+      .inputIcon {
+        margin-left: 10px;
+        color: rgba(255, 255, 255, 0.6)
+      }
+
+      .inputIcon:hover {
+        color: #2696ff
+      }
+    }
+
+    .lsitem:hover {
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #26303e;
+    }
+  }
+
+  .fileSvgBox {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+  }
+
+  .input-bg {
+    height: 36px;
+    width: 260px;
+  }
+
+  .el-dialog__footer {
+    padding: 0;
+  }
+
+  .borderTop {
+    border-top: 1px solid #26303e;
+  }
+
+  .flex-end {
+    justify-content: flex-end !important;
+  }
+
+  .dialogFooter {
+    display: flex;
+    padding-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    .add {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2696ff;
+      line-height: 20px;
+    }
+
+    .add:hover {
+      cursor: pointer;
+      color: #69B7FF;
+    }
+
+    .el-button {
+      width: 80px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .el-button--primary {
+      background: #2156b3;
+    }
+
+    .el-button--danger {
+      margin-left: 20px;
+      border: none;
+      background: #df444d;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .el-button--danger:hover {
+      color: #ffffff;
+      background: #ff5761;
+    }
+  }
+}
+
+:deep(.deletefileDialog) {
+  background: #E1E2E4;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+  border-radius: 10px 10px 10px 10px;
+  --el-dialog-padding-primary: 16px 24px;
+  .el-dialog__close.el-icon{
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 16px !important;
+  }
+  .el-dialog__close.el-icon:hover{
+    color: rgba(255, 255, 255, 0.85);
+  
+  }
+  .el-dialog__title {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .deletext {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 15px 0px 15px 0px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .el-dialog__footer {
+    padding: 0;
+  }
+
+  .el-button {
+    width: 80px;
+    font-size: 14px;
+    height: 32px;
+    font-weight: 500;
+  }
+
+  .el-button--primary {
+    background: #2156b3;
+  }
+
+  .el-button--danger {
+    margin-left: 10px;
+    border: none;
+    background: #c93a42;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .el-button--danger:hover {
+    color: #ffffff;
+    background: #ff5761;
+  }
+}
+
+// el-popover脱离原文本流，样式需写在最外层
+.plusActions {
+
+  box-sizing: border-box;
+  padding: 25px 15px 15px 15px;
+
+  hr {
+    border: 0.5px solid #26303e;
+    margin: 10px 0px 20px 0px;
+    border: none;
+    height: 1px;
+    background-color: #26303e;
+  }
+
+  .plusAction {
+    display: flex;
+    background: inherit;
+    border-radius: 8px 8px 8px 8px;
+    align-items: center;
+    padding: 5px 10px;
+    font-family: Source Han Sans, Source Han Sans;
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    margin-bottom: 10px;
+    height: 32px;
+    box-sizing: border-box;
+
+    img {
+      margin-right: 8px;
+      height: 16px;
+    }
+  }
+
+  .plusAction:hover {
+    background: #2156b3;
+  }
+}
+
+:deep(.el-checkbox__inner) {
+  height: 16px !important;
+  width: 16px !important;
+}
+
+:deep(.el-checkbox__inner::after) {
+  left: 5px;
+  top: 2px;
+}
+
+:deep(.el-checkbox__input.is-indeterminate .el-checkbox__inner::before) {
+  left: 4px !important;
+  top: 6px !important;
+}

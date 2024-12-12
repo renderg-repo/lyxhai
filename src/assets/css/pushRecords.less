@@ -1,0 +1,75 @@
+.pushRecords {
+  display: flex;
+  flex-flow: column;
+  height: calc(100% - 78px);
+  padding: 20px 30px;
+  margin-top: 40px;
+  box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.64),
+    0px 3px 6px 0px rgba(0, 0, 0, 0.48), 0px 5px 12px 1px rgba(0, 0, 0, 0.36);
+  background: #E1E2E4;
+
+  .title {
+    line-height: 26px;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  :deep(.search) {
+    display: flex;
+
+    .el-input__wrapper {}
+
+    .input-bg {
+      height: 36px;
+      margin-right: 20px;
+      --el-input-border-color: #0b1320;
+      box-shadow: 0 0 0 1px #0b1320 inset !important;
+    }
+
+    .input-bg:hover {}
+
+    .el-input__wrapper:hover {}
+
+    .ghostbtn {
+      height: 36px;
+    }
+  }
+
+  .tablebox {
+    .list {
+      margin-top: 15px;
+      overflow: auto;
+      :deep(.el-table th .cell) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.85);
+      }
+
+      :deep(.el-table__append-wrapper) {
+        min-height: 60px;
+        flex: 1;
+      }
+
+      :deep(.el-table__inner-wrapper) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+    }
+
+    .pagination-bar {
+      width: calc(100% - 60px);
+    }
+  }
+
+  .pagination {
+    margin-top: auto
+  }
+
+  :deep(.el-pagination .el-select .el-input) {
+    width: 90px;
+    height: 24px;
+  }
+}

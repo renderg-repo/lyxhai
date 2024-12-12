@@ -1,0 +1,229 @@
+li::marker {
+
+  vertical-align: middle;
+}
+
+.li-content {
+  margin-left: -10px;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 20px);
+  padding: 20px 30px;
+  margin: 0px 20px 20px 20px;
+  box-sizing: border-box;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    height: 28px;
+    margin-bottom: 10px;
+
+    .title {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      font-weight: 700;
+      height: 28px;
+      color: rgba(255, 255, 255, 0.6);
+
+      i {
+        margin-left: 10px;
+      }
+    }
+
+    .progress_row {
+      min-width: 500px;
+      height: 42px;
+
+      .info {
+        display: flex;
+        justify-content: space-between;
+
+        .volume {
+          font-size: 18px;
+          font-weight: 700;
+          color: rgba(255, 255, 255, 0.85);
+        }
+
+        .rule {
+          font-size: 12px;
+          font-weight: 400;
+          cursor: pointer;
+        }
+      }
+
+      .progresss {
+        display: flex;
+        margin-top: 10px;
+        width: 100%;
+        height: 6px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 8px;
+
+        .progress1,
+        .progress2 {
+          height: 6px;
+        }
+
+        .progress1 {
+          background-color: #3070e1;
+          border-radius: 8px 0 0 8px;
+        }
+
+        .progress2 {
+          background-color: orange;
+          border-radius: 0 8px 8px 0;
+        }
+      }
+    }
+  }
+
+  .content {
+    height: calc(100% - 60px);
+    display: flex;
+
+    .tabs {
+      width: 100%;
+
+      :deep(.el-tabs__nav) {
+        .el-tabs__active-bar {
+          width: 86px !important;
+        }
+
+        .el-tabs__item {
+          width: 86px;
+          padding: 0;
+          margin-right: 24px;
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+
+      :deep(.el-tabs__content) {
+        flex: 1;
+        display: flex;
+        height: calc(100% - 60px);
+
+        .el-tab-pane {
+          flex: 1;
+          display: flex;
+          width: 100%;
+
+          .pane_container {
+            width: 100%;
+            flex: 1;
+            display: flex;
+            flex-flow: column;
+
+            .pane_content {
+              flex: 1;
+            }
+          }
+
+          .mask {
+            width: 100%;
+            height: 100%;
+            z-index: 9;
+            background: rgba(0, 0, 0, 0.7);
+          }
+        }
+      }
+      :deep(.is-disabled) {
+        color: rgba(255,255,255,0.15);
+        &:hover {
+          color: rgba(255,255,255,0.15) !important;
+        }
+      }
+
+      .initializebox {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        .initialize {
+          width: 64px;
+          height: 64px;
+          background-color: #2156B3;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          margin-bottom: 30px;
+        }
+
+        .initialize:hover {
+          background-color: #3070e1;
+        }
+      }
+    }
+  }
+}
+
+:deep(.el-tabs__nav-wrap::after) {
+  height: 1px;
+  background: #26303e;
+}
+
+// 弹窗提醒样式
+:deep(.noticeDialog) {
+  background: #1d222a;
+  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+  padding: 15px 20px 30px 20px;
+
+  .el-dialog__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .el-dialog__header {
+    margin-right: 0;
+    border-bottom: 1px solid #26303e;
+    padding: 0px 15px 15px 0px;
+  }
+
+  .el-dialog__body {
+    padding: 30px;
+  }
+
+  .noticeContent {
+    display: flex;
+    align-items: flex-start;
+
+    img {
+      margin: 6px 10px 0 0;
+    }
+
+    .centent {
+      line-height: 30px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .el-dialog__footer {
+    padding-top: 7px;
+  }
+
+  .noticeFooter {
+    display: flex;
+
+    justify-content: space-between;
+
+    button {
+      width: 100px;
+      height: 36px !important;
+    }
+  }
+}

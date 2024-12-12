@@ -1,0 +1,152 @@
+.form {
+  width: 480px;
+  // height: 600px;
+  margin-left: 230px;
+  padding: 80px 52px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 0px 2px 0px rgba(255, 255, 255, 0.70) inset, 0px 1px 1px 0px rgba(255, 255, 255, 0.50) inset, 0px 0px 15px 0px rgba(255, 255, 255, 0.20) inset, 0px 15px 30px 0px rgba(255, 255, 255, 0.20) inset;
+  .title {
+    font-size: 32px;
+    color: #000000;
+    font-weight: 600;
+    text-align: center;
+  }
+  .title-desc {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #000000;
+    text-align: center;
+  }
+  
+  .item_view {
+    margin-top: 0 !important;
+    padding-top: 40px;
+    .item {
+      margin-bottom: 32px;
+      &:last-child {
+        margin-bottom: 20px;
+      }
+      .input_border {
+        border-bottom: 1px solid #2696ff !important;
+      }
+
+      .error_border {
+        border-bottom: 1px solid #d63939 !important;
+      }
+
+      .phone_border {
+        border-bottom: 1px solid #d63939 !important;
+      }
+    }
+  }
+}
+.forget_pass {
+  font-size: 14px;
+  color: #bec3d4;
+  cursor: pointer;
+}
+.submit_btn {
+  width: 100%;
+  padding: 20px 0;
+  border: none;
+  background: linear-gradient( 270deg, #3771FF 0%, #6FADFF 68%, #89CAFF 100%);
+  border-radius: 5px 5px 5px 5px;
+}
+.describe {
+  margin-top: 20px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .register_now_btn {
+    cursor: pointer;
+    color: #2696ff;
+
+    &:hover {
+      color: #69b7ff;
+    }
+  }
+}
+.qrcode {
+  padding-top: 80px;
+
+  .qrcode_con {
+    width: 180px;
+    height: 180px;
+    border-radius: 0px 0px 0px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 0 auto;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    :deep(.circular) {
+      position: relative;
+      left: 50px;
+    }
+
+    .qrcode_mask {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: #000000;
+      opacity: 0.85;
+      top: 15px;
+      left: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .refresh_icon {
+        width: 32px;
+        height: 32px;
+        display: block;
+
+        cursor: pointer;
+      }
+
+      .text {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.85);
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .desc {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 400;
+    justify-content: center;
+    margin-top: 80px;
+
+    .one {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .two {
+      cursor: pointer;
+      color: #2696ff;
+      margin-left: 10px;
+
+      &:hover {
+        color: #69b7ff;
+      }
+    }
+  }
+}
