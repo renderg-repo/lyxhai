@@ -5,7 +5,7 @@
         <div class="title">
           {{ current_step == 1 || current_step == 2 ? "欢迎注册龙游星海" : "欢迎加入！" }}
         </div>
-        <div class="title-desc">WELCOME!</div>
+        <div class="title-desc" style="margin-bottom: 40px;">WELCOME!</div>
         <div class="right_icon">
           <div class="return_login_text flex-align-center" @click="returnLoginClick">
             <el-icon class="back-icon"><Back /></el-icon>

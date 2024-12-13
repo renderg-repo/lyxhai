@@ -7,10 +7,10 @@
 // const API_BASE_URL = "http://192.168.30.116:8201/";
 //正式环境
 // const API_BASE_URL = " https://v.spacehpc.com/api/";
-const API_BASE_URL = "https://gpu.spacehpc.com/api/";
-const API_BASE_URL2 = "https://gpu.spacehpc.com/api/";
-// const API_BASE_URL = "http://api.test.sfbp.net/";
-// const API_BASE_URL2 = "http://api.test.sfbp.net/";
+// const API_BASE_URL = "https://gpu.spacehpc.com/api/";
+// const API_BASE_URL2 = "https://gpu.spacehpc.com/api/";
+const API_BASE_URL = "http://api.test.sfbp.net/";
+const API_BASE_URL2 = "http://api.test.sfbp.net/";
 
 // http://192.168.30.166:8201/
 

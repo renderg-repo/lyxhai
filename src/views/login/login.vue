@@ -500,6 +500,9 @@ onUnmounted(() => {
     border-radius: 5px;
     .el-input__wrapper {
       background-color: rgba(48, 104, 255, 0.05) !important;
+      ::placeholder {
+        color: rgba(0, 0, 0, 0.3) !important;
+      }
     }
   }
 }
