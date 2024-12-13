@@ -30,7 +30,11 @@
               <div style="margin-right: 78px">
                 <div class="titletext">
                   即将到期
-                  <el-popover placement="top" popper-class="dashboard_pop" :width="277" trigger="hover"
+                  <el-popover 
+                    placement="top" 
+                    popper-class="dashboard_pop" 
+                    :width="277" 
+                    trigger="hover"
                     content="包日/包月实例，距离到期时间不足3天的，将会在此处显示。">
                     <template #reference>
                       <i class="spacehpc_iconfont hpc_basic_icon_question_circle cf30"></i>
@@ -240,7 +244,7 @@
     <div class="dashboardright">
       <div class="dashboardrighttop">
         <div class="title">
-          <div class="f18 fw700 flex">
+          <div class="f18 cf85 fw700 flex">
             邀请得奖励
             <i class="spacehpc_iconfont hpc_basic_icon_question_circle cf45 cursor"
               style="margin-left: 6px; margin-top: 1px" @click="openurl"></i>
@@ -745,7 +749,7 @@ onMounted(() => {
 </style>
 <style lang="less">
 .dashboard_pop {
-  --el-text-color-regular: rgba(225, 225, 225, 0.85);
+  --el-text-color-regular: rgba(0, 0, 0, 0.85);
   --el-popover-padding: 5px 8px;
   line-height: 22px;
   font-weight: 350 !important;

@@ -6,10 +6,10 @@ body {
 .el-button.is-link > span {
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 .el-button.is-link > span:hover {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85);
 }
 .el-button.el-button--primary.is-link  {
   color: #2696ff;
@@ -40,8 +40,8 @@ body {
   user-select: none;
 }
 .el-dropdown__popper.el-popper {
-  border-color: #1d222a !important;
-  background: #1d222a !important;
+  border-color: rgba(225, 225, 225, 0.85) !important;
+  background: rgba(225, 225, 225, 0.85) !important;
   right: 30px !important;
   top: 71px !important;
   width: 280px;
@@ -49,7 +49,7 @@ body {
   overflow: hidden;
 }
 .el-dropdown__popper.el-popper .el-dropdown-menu__item:not(.is-disabled):focus {
-  background-color: #2156b3 !important;
+  /* background-color: #2156b3 !important; */
   font-weight: 700;
   color: #ffffff !important;
   border-radius: 8px;
@@ -91,7 +91,7 @@ body {
 .el-dropdown__popper.el-popper .list {
   padding: 0 15px 10px;
   box-sizing: border-box;
-  background: #1d222a !important;
+  background: rgba(225, 225, 225, 0.85) !important;
 }
 .el-dropdown__popper.el-popper .list .icon {
   width: 14px;
@@ -123,7 +123,7 @@ body {
   display: none;
 }
 .el-table__row {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85);
 }
 .el-table__row .del_text {
   font-size: 14px;
@@ -362,11 +362,15 @@ input:-internal-autofill-selected {
   border-radius: 4px;
 }
 .ghostbtn {
-  --el-border-color: rgba(255, 255, 255, 0.15);
+  --el-border-color: rgba(0, 0, 0, 0.15);
   --el-button-hover-bg-color: transparent;
   color: rgba(255, 255, 255, 0.85);
   background-color: transparent;
   border-radius: 4px;
+}
+.ghostbtn.newbtn {
+  --el-border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
 }
 .ghostbtn:hover {
   color: #ffffff;

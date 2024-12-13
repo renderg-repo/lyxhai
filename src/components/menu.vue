@@ -400,7 +400,7 @@ onMounted(() => {
       }
 
       .active_i {
-        background: #1e2d40 !important;
+        background: #3070E1 !important;
 
         .title {
           color: #ffffff !important;

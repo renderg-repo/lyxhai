@@ -8,7 +8,7 @@
           <i class="spacehpc_iconfont hpc_basic_icon_info_circle" style="margin-left: 10px; font-size: 20px"></i>
         </template>
         <div class="notice_card">
-          <div class="notice_content" style="color: rgba(255, 255, 255, 0.85)">
+          <div class="notice_content" style="color: rgba(0, 0, 0, 0.85)">
             关机期间不计费，关机状态持续 7 天，自动删除实例。
           </div>
         </div>
@@ -64,7 +64,7 @@
                 @click="handleEditHostname($event, row.id)"></i>
             </div>
             <div class="flex justity-between">
-              <div style="color: rgba(255, 255, 255, 0.45)">{{ row.vmid }}</div>
+              <div style="color: rgba(0, 0, 0, 0.45)">{{ row.vmid }}</div>
               <i v-if="row.status != 'destroy'" class="spacehpc_iconfont hpc_gpu_icon_copy copy_icon f22"
                 @click="copyClick(`${row.vmid}`)"></i>
             </div>
@@ -170,7 +170,7 @@
                     @change="handleCheckboxGrop('ChargeTypes', $event)">
                     <el-checkbox style="height: 22px;" v-for="item in ChargeTypes" :key="item.dictValue"
                       :value="item.dictValue">
-                      <span style="color: rgba(255, 255, 255, 0.85)">{{
+                      <span style="color: rgba(0, 0, 0, 0.85)">{{
                         item.dictLabel
                       }}</span>
                     </el-checkbox>
@@ -180,15 +180,18 @@
             </div>
           </template>
           <template #default="{ row }">
-            <div v-show="row.chargeType == 0">按量计费</div>
-            <div v-show="row.chargeType == 1">包日计费</div>
-            <div v-show="row.chargeType == 2">包月计费</div>
+            <div v-show="row.chargeType == 0" style="color: rgba(0, 0, 0, 0.85)">按量计费</div>
+            <div v-show="row.chargeType == 1" style="color: rgba(0, 0, 0, 0.85)">包日计费</div>
+            <div v-show="row.chargeType == 2" style="color: rgba(0, 0, 0, 0.85)">包月计费</div>
           </template>
         </el-table-column>
         <el-table-column label="配置" prop="gpuNum" min-width="180">
           <template #default="{ row }">
             <p>{{ row.gpu }}*{{ row.gpuNum }}卡</p>
-            <el-popover :offset="5" :width="320" popper-class="filterPop"
+            <el-popover 
+              :offset="5" 
+              :width="320" 
+              popper-class="filterPop"
               popper-style="padding: 30px 15px 10px 30px !important;width:311px" :show-arrow="false"
               placement="bottom-start">
               <template #reference>
@@ -247,7 +250,7 @@
                   <img src="@/assets/images/hosts/warning (3).svg" style="width: 12px" alt="" />
                 </template>
                 <div class="notice_card">
-                  <div class="notice_content" style="color: rgba(255, 255, 255, 0.85); font-size: 14px">
+                  <div class="notice_content" style="color: rgba(0, 0, 0, 0.85); font-size: 14px">
                     到期时间是包日包月实例到期时间，到期后自动关机。
                   </div>
                 </div>
@@ -418,17 +421,6 @@
         <el-table-column label="操作" fixed="right" min-width="130">
           <template #default="{ row }">
             <template v-if="row.status != 'destroy'" >
-              <!-- v-show="new Date(row.expireAt) - new Date() < 0" -->
-               <!-- :disabled="row.status == 'created' ||
-                row.status == 'starting' ||
-                row.status == 'stopping'
-                " -->
-                <!-- (row.status == 'ready' || 
-                      row.status == 'starting' || 
-                      row.status == 'running' || 
-                      row.status == 'stopping' || 
-                      row.status == 'created') && 
-                      (row.lastStartAt != null && row.chargeType == 0) -->
               <el-button 
                 v-if="row.lastStartAt == null ? row.status == 'ready' : 
                       row.status == 'ready' || 
@@ -444,14 +436,19 @@
                                row.status == 'error' " 
                 :disabled="row.status == 'deleted'"
                  link @click="handleConfirm(row, 'start')">开机</el-button>
-              <el-popover v-if="row.status != 'createdError' && row.status != 'deleted' && 
-                      row.lastStartAt != null" trigger="hover" v-model="opearatPopVisible" :show-arrow="false" placement="bottom-end"
-                :hide-after="0" width="134" popper-style="border: none;padding: 0;min-width: 134px;">
+              <el-popover 
+                v-if="row.status != 'createdError' && row.status != 'deleted' && 
+                      row.lastStartAt != null" 
+                      trigger="hover" 
+                      v-model="opearatPopVisible" 
+                      :show-arrow="false" 
+                      placement="bottom-end"
+                      :hide-after="0"
+                      width="134" popper-style="border: none;padding: 0;min-width: 134px;">
                 <template #reference>
                   <el-button link>
                     <i style="font-size: 20px" class="spacehpc_iconfont hpc_basic_icon_more"></i>
                   </el-button>
-                  <!-- <el-button link><img src="@/assets/images/hosts/more.svg" alt=""></el-button> -->
                 </template>
                 <div class="operate" >
                   <el-tooltip placement="left-start" effect="dark" content="按量计费实例关机后可使用无卡模式开机。费用为0.2元/时"
@@ -2636,23 +2633,23 @@ export default {
 }
 
 :deep(.input-bg .el-input__inner::-webkit-input-placeholder) {
-  color: rgba(255, 255, 255, 0.3) !important;
+  color: rgba(0, 0, 0, 0.3) !important;
 }
 .el-link.is-disabled.item {
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(0, 0, 0, 0.45);
 }
 </style>
 <style lang="less">
 .el-popover.el-popper {
   border: none !important;
-  background: #0b1320 !important;
+  background: #e9ebee !important;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.48),
     0px 6px 16px 0px rgba(0, 0, 0, 0.32), 0px 9px 28px 0px rgba(0, 0, 0, 0.2) !important;
 }
 
 .el-popper.is-light .el-popper__arrow::before {
   border: 1px solid #0b1320;
-  background: #0b1320;
+  background: #e9ebee;
   right: 0;
 }
 

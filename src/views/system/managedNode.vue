@@ -415,7 +415,7 @@ onBeforeUnmount(()=> {
   box-shadow: 0 0 0 1px #0b1320;
 }
 :deep(.el-switch__core) {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border: 0px;
   width: 21px;
   height: 12px;
@@ -442,7 +442,7 @@ onBeforeUnmount(()=> {
   border-bottom: 1px solid #26303e !important;
 }
 :deep(.el-switch__core) {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border: 0px;
   width: 21px;
   height: 12px;

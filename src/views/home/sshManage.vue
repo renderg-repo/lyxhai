@@ -320,7 +320,7 @@ const downSshFile = (name) => {
 }
 
 :deep(.el-switch__core) {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border: 0px;
   width: 21px;
   height: 12px;
@@ -347,7 +347,7 @@ const downSshFile = (name) => {
   border-bottom: 1px solid #26303e !important;
 }
 :deep(.el-switch__core) {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border: 0px;
   width: 21px;
   height: 12px;

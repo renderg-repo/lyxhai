@@ -1171,7 +1171,7 @@ function crossDialogClose() {
 <style lang="less" scoped>
 .el-popover.el-popper {
   border: none !important;
-  background: #0b1320 !important;
+  background: #e9ebee !important;
   width: 200px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.48),
     0px 6px 16px 0px rgba(0, 0, 0, 0.32), 0px 9px 28px 0px rgba(0, 0, 0, 0.2) !important;

@@ -448,16 +448,17 @@ const dictMate = (type, val) => {
         display: flex;
 
         .typeitem {
-          border-radius: 8px;
-          padding: 1px 6px;
           width: 50px;
-          font-size: 12px;
-          box-sizing: border-box;
           height: 20px;
           line-height: 16px;
+          font-size: 12px;
+          box-sizing: border-box;
+          border-radius: 8px;
           text-align: center;
+          padding: 1px 6px;
           margin-right: 8px;
-          background: #26303e;
+          color: #fff;
+          background: #2156b3;
         }
       }
     }
@@ -481,7 +482,8 @@ const dictMate = (type, val) => {
 
   .balance {
     padding: 10px;
-    background: #0b1320;
+    background: #D7DBE2;
+    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.3);
     height: 66px;
     display: flex;
     box-sizing: border-box;
@@ -532,7 +534,7 @@ const dictMate = (type, val) => {
 
       .bottom {
         .f12 {
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(0, 0, 0, 0.6);
         }
       }
 

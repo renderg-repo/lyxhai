@@ -28,7 +28,7 @@
           <i @mouseenter="showTips = true" @mouseleave="showTips = false" style="
               margin-left: 8px;
               font-size: 20px;
-              color: rgba(255, 255, 255, 0.6);
+              color: rgba(0, 0, 0, 0.6);
             " class="spacehpc_iconfont hpc_basic_icon_info_circle"></i>
           <div v-show="showTips">
             <div class="tipText" v-if="queryType == 'clone'">
@@ -37,7 +37,7 @@
             <div class="tipText" v-else-if="queryType == 'edit'">
               升降配置，只可以在本区操作。
             </div>
-            <div class="tipText" v-else>
+            <div class="tipText " v-else>
               实例在不同地域内网络是独立的，无法进行内网通信。
             </div>
           </div>
@@ -141,14 +141,16 @@
               :disabled="isexpansion"
               @change="expansionchange"
               ></el-checkbox>
-            <div class="flex" style="border-radius: 8px; overflow: hidden">
+            <div 
+              class="flex" 
+              style="border-radius: 8px; overflow: hidden">
               <el-input :disabled="!expansion" v-model="cost" :class="{ 'disabled-input': !expansion }"
                 class="input-bg input240" :placeholder="expandTheScope" controls-position="right"
                 @input="handleInput" />
             </div>
             <span class="ml10" 
-            style="color: rgba(255, 255, 255, 0.6);"
-            :style="expansion ? 'color: rgba(255,255,255, 60%)' : 'color: rgba(255, 255, 255, 0.3)'">GB</span>
+            style="color: rgba(0, 0, 0, 0.6);"
+            :style="expansion ? 'color: rgba(0, 0, 0, 60%)' : 'color: rgba(0, 0, 0, 0.3)'">GB</span>
           </div>
         </div>
         <div class="des">
@@ -178,12 +180,6 @@
               @change="handleOsName">
               <el-radio v-for="(val, key, i) in imagesList" :value="key" :key="i" border class="baseImage">
                 <div class="flex imgTitle">
-                  <!-- <img v-show="key == 'centos'" src="@/assets/images/hosts/centos.svg" alt="">
-                                    <img v-show="key == 'ubuntu'" src="@/assets/images/hosts/ubuntu.svg" alt="">
-                                    <img v-show="key == 'windows'" src="@/assets/images/hosts/windows.svg" alt="">
-                                    <img v-show="key == 'debian'" src="@/assets/images/hosts/debian.svg" alt="">
-                                    <img v-show="key == 'redhat'" src="@/assets/images/hosts/redhat.svg" alt="">
-                                                                      <img v-show="key == 'rocky'" src="@/assets/images/hosts/rocky.svg" alt=""> -->
                   <img v-if="val[0] && val[0].iconUrl" :src="val[0].iconUrl" width="28" height="28" alt="" />
                   <div class="f18 fw700 cf6 title">{{ key }}</div>
                 </div>
@@ -626,10 +622,10 @@
         <el-collapse v-model="activeNames" @change="handleChange()">
           <el-collapse-item name="1">
             <template #title>
-              <p style="line-height: 26px; height: 28px" class="f18 fw700 flex">优惠券</p>
+              <p style="line-height: 26px; height: 28px; background: transparent" class="f18 fw700 flex">优惠券</p>
               <div class="tag">
                 <div class="tagbox"
-                  :style="{ background: (Couponlist && Couponlist.length) ? '' : '#1d222a !important' }">
+                  :style="{ background: (Couponlist && Couponlist.length) ? '' : '#e1e2e4 !important' }">
                   <span v-if="Couponlist && Couponlist.length">{{ Couponlist.length }}</span>
                 </div>
                 <p class="active cf6" v-if="checkList.length > 0">
@@ -676,7 +672,7 @@
                   </template>
                 </DictComponent>
               </div>
-              <div v-show="Couponlist && Couponlist.length == 0" class="f14 lh22 cf6">无可用优惠券</div>
+              <div v-show="Couponlist && Couponlist.length == 0" class="f14 lh22 cf6" style="background-color: #e1e2e4;">无可用优惠券</div>
             </div>
           </el-collapse-item>
         </el-collapse>
@@ -695,12 +691,14 @@
                   <el-option :value="2" label="包月计费">包月计费</el-option>
                 </el-select>
               </div>
-              <div class="num" v-if="pveCreateParam.chargeType != 0">
-                <div class="f18">购买时长：</div>
-                <div class="input-bg">
-                  <el-select popper-class="selectPop" v-if="pveCreateParam.chargeType == 1"
+              <div class="num " v-if="pveCreateParam.chargeType != 0">
+                <div class="f18" style="color: rgba(0, 0, 0, 0.6)">购买时长：</div>
+                <div class="">
+                  <el-select 
+                    popper-class="selectPop" 
+                    v-if="pveCreateParam.chargeType == 1"
                     v-model="pveCreateParam.payTimes"
-                    style="width: 100px; border-radius: 8px; overflow: hidden;height:32px">
+                    style="width: 100px; border-radius: 8px; overflow: hidden; height:32px">
                     <el-option :value="1" label="1日"></el-option>
                     <el-option :value="2" label="2日"></el-option>
                     <el-option :value="3" label="3日"></el-option>
@@ -762,7 +760,7 @@
               </div>
               <div class="solde sum">
                 <div class="flex f14" style="height: 26px">
-                  <p class="lh20">配置费用：</p>
+                  <p class="lh20 fc85">配置费用：</p>
                   <div class="cred flex f24" v-if="pveCreateParam.chargeType == 0">
                     <div style="font-size: 14px;">￥</div>
                     <div v-if="CreateView && CreateView.vmChargeInfoVoList" style="position: relative;top: -3px;">
@@ -827,7 +825,7 @@
                   </el-popover>
                 </div>
                 <div class="chargeRow">
-                  <div class="balance">
+                  <div class="balance fc85">
                     账户余额：￥{{ accountInfo.balance }}
                   </div>
                   <el-button class="chargeBtn" text bg @click="this.$router.push('/mine/recharge')">充值</el-button>
@@ -994,7 +992,11 @@
       </template>
     </el-dialog>
     <!-- 订单确认弹窗 -->
-    <el-dialog class="noticeDialog" title="订单确认" v-model="orderConfirmation" style="width: 530px; background: #1d222a">
+    <el-dialog 
+      class="noticeDialog" 
+      title="订单确认" 
+      v-model="orderConfirmation" 
+      style="width: 530px;">
       <div class="ps">
         <p class="cf6">区域：</p>
         {{ getTheRegion(pveCreateParam.zoneId) }}
@@ -1054,7 +1056,11 @@
       </template>
     </el-dialog>
     <!-- 续费弹窗 -->
-    <el-dialog class="renewalDialog" title="包日/包月续费" v-model="renewalVisible" style="width: 530px; background: #1d222a">
+    <el-dialog 
+      class="renewalDialog" 
+      title="包日/包月续费" 
+      v-model="renewalVisible" 
+      style="width: 530px;">
       <p class="ps">
       <p class="cf6">实例名称/ID：</p>{{ vmInfo.name }}
       </p>
@@ -1122,7 +1128,11 @@
       </template>
     </el-dialog>
     <!-- 余额不足多卡弹窗 -->
-    <el-dialog class="balanceDialog" v-model="balanceVisible" :width="dialogWidth" :show-close="false"
+    <el-dialog 
+      class="balanceDialog" 
+      v-model="balanceVisible" 
+      :width="dialogWidth" 
+      :show-close="false"
       :style="{ width: dialogWidth }">
       <template #title>
         <i style="
@@ -2822,9 +2832,12 @@ export default {
 </style>
 
 <style lang="less">
+.fc85 {
+  color: rgba(0, 0, 0, 0.85);
+}
 .el-popover.el-popper {
   border: none !important;
-  background: #0b1320 !important;
+  background: #D7DBE2 !important;
   border-radius: 10px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.48),
     0px 6px 16px 0px rgba(0, 0, 0, 0.32), 0px 9px 28px 0px rgba(0, 0, 0, 0.2) !important;
@@ -2851,7 +2864,7 @@ export default {
   display: flex;
   align-items: center;
 
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85);
 }
 
 .selectPop1 .el-select-dropdown__wrap {

@@ -278,14 +278,14 @@ function initStorageAccountbtn(item) {
 <style lang="less">
 .el-popover.el-popper {
   border: none !important;
-  background: #0b1320 !important;
+  background: #e9ebee !important;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.48),
     0px 6px 16px 0px rgba(0, 0, 0, 0.32), 0px 9px 28px 0px rgba(0, 0, 0, 0.2) !important;
 }
 
 .el-popper.is-light .el-popper__arrow::before {
-  border: 1px solid #0b1320;
-  background: #0b1320;
+  border: 1px solid #e9ebee;
+  background: #e9ebee;
   right: 0;
 }
 

@@ -436,7 +436,7 @@ function sshDelFn() {
 }
 
 :deep(.el-switch__core) {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border: 0px;
 
 
@@ -464,7 +464,7 @@ function sshDelFn() {
 }
 
 :deep(.el-switch__core) {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.5);
   border: 0px;
   width: 21px;
   height: 12px;
