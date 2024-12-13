@@ -106,7 +106,7 @@
                     修改
                   </p>
                 </div>
-                <div class="f14 cf45 text-ellipsis" v-show="earlyWarningSwitch" style="margin-top: 12px; line-height: 22px">
+                <div class="f14 bcf45 text-ellipsis" v-show="earlyWarningSwitch" style="margin-top: 12px; line-height: 22px">
                   (余额不足 {{ alarmBalance || 0 }} 元预警)
                 </div>
               </div>
@@ -246,14 +246,14 @@
         <div class="title">
           <div class="f18 cf85 fw700 flex">
             邀请得奖励
-            <i class="spacehpc_iconfont hpc_basic_icon_question_circle cf45 cursor"
+            <i class="spacehpc_iconfont hpc_basic_icon_question_circle bcf45 cursor"
               style="margin-left: 6px; margin-top: 1px" @click="openurl"></i>
           </div>
           <el-button class="bgBtn" text bg @click="share()">复制邀请链接</el-button>
         </div>
         <div class="invitecard">
           <div class="card">
-            <div class="f12 cf45 lh18">已获得奖励</div>
+            <div class="f12 bcf45 lh18">已获得奖励</div>
             <div class="cf85">
               <span class="f12">￥</span>
               <span class="f24 number">{{
@@ -265,7 +265,7 @@
           </div>
           <div class="card cardcenter">
             <div class="f12">
-              <span class="cf45">已邀请用户</span>
+              <span class="bcf45">已邀请用户</span>
               <span class="linkbtn" @click="
                 router.push({
                   path: 'mine/recharge',
@@ -281,7 +281,7 @@
           </div>
           <div class="card">
             <div class="f12 cardcode" st>
-              <span class="cf45">我的邀请码</span>
+              <span class="bcf45">我的邀请码</span>
               <span class="linkbtn" @click="copycode()">复制</span>
             </div>
             <div class="cf85">

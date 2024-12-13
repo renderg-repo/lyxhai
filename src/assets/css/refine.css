@@ -689,7 +689,7 @@
 }
 .bgBtn {
   font-weight: 500;
-  background-color: #3070E1 !important;
+  background-color: #26303e !important;
   border-radius: 8px;
 }
 .hw120 {
@@ -698,7 +698,7 @@
 }
 .bgBtn:hover {
   color: #ffffff;
-  background: #3070E1 !important;
+  background: #26303e !important;
 }
 .el-button.is-link:not(.is-disabled):hover {
   color: rgba(255, 255, 255, 0.85) !important;

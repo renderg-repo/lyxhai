@@ -345,7 +345,7 @@ const dictMate = (type, val) => {
   font-size: 18px;
   font-weight: 700;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .accountSecurity {
@@ -370,7 +370,7 @@ const dictMate = (type, val) => {
           font-weight: 700;
           font-size: 14px;
           line-height: 20px;
-          color: rgba(255, 255, 255, 0.85);
+          color: rgba(0, 0, 0, 0.85);
         }
 
         .desc {
@@ -381,7 +381,7 @@ const dictMate = (type, val) => {
           display: flex;
           justify-content: space-between;
           line-height: 22px;
-          color: rgba(255, 255, 255, 0.6);
+          color: rgba(0, 0, 0, 0.6);
           font-size: 14px;
 
           .right {

@@ -159,7 +159,7 @@
             </div>
           </template>
           <template #default="scope">
-            <span :style="scope.row.payStatus == 2 ? 'color: rgba(223, 68, 77, 1)' : 'color: rgba(225, 225, 225, 0.85)'
+            <span :style="scope.row.payStatus == 2 ? 'color: rgba(223, 68, 77, 1)' : 'color: rgba(0, 0, 0, 0.85)'
               ">{{ dictMate("status", scope.row.payStatus) }}</span>
           </template>
         </el-table-column>
@@ -656,7 +656,7 @@ function clearinput() {
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 
   .content {
@@ -803,7 +803,7 @@ function clearinput() {
 
 .des {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 :deep(.el-range-separator) {
@@ -813,12 +813,12 @@ function clearinput() {
 .filterPop {
   p {
     margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 }
 
 :deep(.el-table-fixed-column--right) {
-  background-color: #1d222a !important;
+  background-color: #e9ebee !important;
 }
 
 :deep(.el-table .cell) {

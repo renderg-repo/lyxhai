@@ -11,7 +11,7 @@
     <template v-if="dialogFrom.type == 1">
       <el-form ref="ruleFormRef" :model="form" :rules="rules" label-position="top"  :inline="true" @submit.stop.prevent>
         <el-form-item prop="username" style="margin: 0px !important;">
-          <el-input input-style="color:#FFFFFF;" clearable style="width: 410px; height: 40px" v-model="form.username"
+          <el-input input-style="color:#000;" clearable style="width: 410px; height: 40px" v-model="form.username"
             placeholder="用户名" @keyup.enter="confirmDialog(ruleFormRef)">
           </el-input>
         </el-form-item>
@@ -21,7 +21,7 @@
     <template v-if="dialogFrom.type == 2">
       <el-form ref="ruleFormRef" :model="form" :rules="rules" label-position="top" :inline="true" @submit.stop.prevent>
         <el-form-item prop="company">
-          <el-input input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.company"
+          <el-input input-style="color:#000;" style="width: 410px; height: 40px" v-model="form.company"
             placeholder="资料" @keyup.enter="confirmDialog(ruleFormRef)">
           </el-input>
         </el-form-item>
@@ -31,17 +31,18 @@
     <template v-if="dialogFrom.type == 3">
       <el-form ref="ruleFormRef" :model="form" :rules="rules" label-position="top" :inline="true" @submit.stop.prevent style="margin-top: 20px;">
         <el-form-item prop="oldPassword" style="margin:0px 0px 10px 0px" >
-          <el-input type="password" autocomplete="current-password" show-password input-style="color:#FFFFFF;"
-            style="width: 410px; height: 40px" v-model="form.oldPassword" placeholder="现在的密码" />
+          <!-- input-style="color:#FFFFFF;" -->
+          <el-input type="password" autocomplete="current-password" show-password 
+            style="width: 410px; height: 40px; color: #fff;" v-model="form.oldPassword" placeholder="现在的密码" />
         </el-form-item>
         <el-form-item style="margin:0px 0px 10px 0px" prop="password">
           <el-input id="new-password" type="password" name="newPassword" autocomplete="new-password" show-password
-            input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.password"
+             style="width: 410px; height: 40px" v-model="form.password"
             placeholder="新密码长度为8-20个字符，包含数字和字母组合" />
         </el-form-item>
         <el-form-item prop="newPassword2" style="margin:0px 0px 10px 0px" >
           <el-input id="confirm-new-password" type="password" name="confirmNew" autocomplete="new-password"
-            show-password input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.newPassword2"
+            show-password  style="width: 410px; height: 40px" v-model="form.newPassword2"
             placeholder="确认新密码" @keyup.enter="confirmDialog(ruleFormRef)">
           </el-input>
         </el-form-item>
@@ -52,12 +53,12 @@
       <el-form ref="ruleFormRef" :model="form" :rules="rules" label-position="top" :inline="true" @submit.stop.prevent>
         <el-form-item prop="password">
           <el-input id="new-password" type="password" name="newPassword" autocomplete="new-password" show-password
-            input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.password"
+            input-style="color:#000;" style="width: 410px; height: 40px" v-model="form.password"
             placeholder="新密码长度为8-20个字符，包含数字和字母组合" />
         </el-form-item>
         <el-form-item prop="newPassword2">
           <el-input id="confirm-new-password" type="password" name="confirmNew" autocomplete="new-password"
-            show-password input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.newPassword2"
+            show-password input-style="color:#000;" style="width: 410px; height: 40px" v-model="form.newPassword2"
             placeholder="确认新密码" @keyup.enter="confirmDialog(ruleFormRef)">
           </el-input>
         </el-form-item>
@@ -67,12 +68,12 @@
     <template v-if="dialogFrom.type == 4">
       <el-form ref="ruleFormRef" :model="form" :rules="rules" label-position="top" :inline="true" @submit.stop.prevent  >
         <el-form-item prop="email">
-          <el-input input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.email"
+          <el-input input-style="color:#000;" style="width: 410px; height: 40px" v-model="form.email"
             placeholder="邮箱地址" />
         </el-form-item>
         <el-form-item prop="smsCode">
           <div class="input_box">
-            <el-input input-style="color:#FFFFFF;" style="width: 260px; height: 40px" v-model="form.smsCode"
+            <el-input input-style="color:#000;" style="width: 260px; height: 40px" v-model="form.smsCode"
               placeholder="验证码" @change="codeChange">
             </el-input>
             <el-button class="code_btn" :disabled="sms.disabled" @click="codeClick(1)">{{ sms.codeText }}</el-button>
@@ -139,7 +140,7 @@
         <div class="phone_text">{{ hideMiddleDigits(form.phone) }}</div>
         <el-form-item prop="oldSmsCode">
           <div class="input_box">
-            <el-input input-style="color:#FFFFFF;" style="width: 260px; height: 40px" v-model="form.oldSmsCode"
+            <el-input input-style="color:#000;" style="width: 260px; height: 40px" v-model="form.oldSmsCode"
               placeholder="验证码" @change="codeChange" @keyup.enter="confirmDialog(ruleFormRef)">
             </el-input>
             <el-button class="code_btn" :disabled="sms.disabled" @click="codeClick(3)">{{ sms.codeText }}</el-button>
@@ -151,12 +152,12 @@
     <template v-if="dialogFrom.type == 10">
       <el-form ref="ruleFormRef" :model="form" :rules="rules" label-position="top" :inline="true" @submit.stop.prevent>
         <el-form-item prop="newPhone">
-          <el-input input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.newPhone"
+          <el-input input-style="color:#000;" style="width: 410px; height: 40px" v-model="form.newPhone"
             placeholder="新的手机号" />
         </el-form-item>
         <el-form-item prop="newSmsCode">
           <div class="input_box">
-            <el-input input-style="color:#FFFFFF;" style="width: 260px; height: 40px" v-model="form.newSmsCode"
+            <el-input input-style="color:#000;" style="width: 260px; height: 40px" v-model="form.newSmsCode"
               placeholder="验证码" @change="codeChange" @keyup.enter="confirmDialog(ruleFormRef)">
             </el-input>
             <el-button class="code_btn" :disabled="sms.disabled" @click="codeClick(4)">{{ sms.codeText }}</el-button>
@@ -168,12 +169,12 @@
     <template v-if="dialogFrom.type == 11">
       <el-form ref="ruleFormRef" :model="form" :rules="rules" label-position="top" :inline="true" @submit.stop.prevent>
         <el-form-item prop="newPhone">
-          <el-input input-style="color:#FFFFFF;" style="width: 410px; height: 40px" v-model="form.newPhone"
+          <el-input input-style="color:#000;" style="width: 410px; height: 40px" v-model="form.newPhone"
             placeholder="新的手机号" />
         </el-form-item>
         <el-form-item prop="newSmsCode">
           <div class="input_box">
-            <el-input input-style="color:#FFFFFF;" style="width: 260px; height: 40px" v-model="form.newSmsCode"
+            <el-input input-style="color:#000;" style="width: 260px; height: 40px" v-model="form.newSmsCode"
               placeholder="验证码" @change="codeChange" @keyup.enter="confirmDialog(ruleFormRef)">
             </el-input>
             <el-button class="code_btn" :disabled="sms.disabled" @click="codeClick(4)">{{ sms.codeText }}</el-button>

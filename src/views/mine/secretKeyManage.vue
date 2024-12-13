@@ -272,7 +272,7 @@ function sshDelFn() {
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 
   .secretKeyManage_con {

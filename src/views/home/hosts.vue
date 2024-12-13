@@ -109,28 +109,28 @@
               </div>
             </div>
             
-            <div class="flex cf45 f12" style="margin:3px 0px 0px 15px"
+            <div class="flex bcf45 f12" style="margin:3px 0px 0px 15px"
               v-if="scope.row.status == 'stopping' && scope.row.chargeType == 0">
               已结束计费</div>
-            <div class="flex cf45 f12" style="margin:3px 0px 0px 15px"
+            <div class="flex bcf45 f12" style="margin:3px 0px 0px 15px"
               v-if="scope.row.status == 'locking'">
               {{ matchReason(scope.row.statusReasonCode) }}</div>
             <div 
             v-if="scope.row.vmProgress && 
                   scope.row.status == 'starting' && 
                   scope.row.vmProgress.stage == 'vm_progress_image_sync'"
-              class=" cf45 f12" style="margin:3px 0px 0px 15px">
+              class=" bcf45 f12" style="margin:3px 0px 0px 15px">
               <el-progress :percentage="scope.row.vmProgress.progress" :show-text="false" stroke-width="2" style="margin: 6px 0 ;" />
               <p class="flex-between flex-align-center">
                 <span>首次创建较慢，未计费</span>
               </p>
             </div>
-            <div class="flex cf45 f12" style="margin:3px 0px 0px 15px"
+            <div class="flex bcf45 f12" style="margin:3px 0px 0px 15px"
               v-if="(scope.row.chargeType == 0 && scope.row.status == 'created' || 
                     scope.row.chargeType == 0 && scope.row.status == 'starting' || 
                     scope.row.chargeType == 0 && scope.row.status == 'running') && !scope.row.vmProgress">
               未开始计费</div>
-            <div class="flex cf45 f12" style="margin:3px 0px 0px 15px"
+            <div class="flex bcf45 f12" style="margin:3px 0px 0px 15px"
               v-if="scope.row.vmConfigUnit && scope.row.status == 'stopped' && scope.row.vmConfigUnit.configNum < scope.row.gpuNum && scope.row.chargeType == 0">
               GPU不足</div>
             <div class="cred  flex f12" v-if="scope.row.usedStorage / scope.row.storage > 0.95"
@@ -1122,7 +1122,7 @@
           <div class="steps">
             <div class="steps_title">2.&nbsp; 运行SSH命令</div>
             <div class="sshCommand">
-              <div class="cf6">{{ generateSSHCommand() }}</div> <i
+              <div class="wcf6">{{ generateSSHCommand() }}</div> <i
                 class="spacehpc_iconfont hpc_gpu_icon_copy copy_icon f22 linkbtn"
                 @click="copyClick(generateSSHCommand())" style="margin-left: 10px;">
               </i>
@@ -2619,7 +2619,7 @@ export default {
 <style>
 .el-select-dropdown__wrap {
   padding: 10px 0;
-  background: #1d222a;
+  background: #E1E2E4;
   border-radius: 6px 6px 6px 6px;
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.45);
 }

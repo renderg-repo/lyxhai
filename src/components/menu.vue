@@ -453,7 +453,7 @@ onMounted(() => {
       margin-top: 16px;
       font-size: 14px;
       font-weight: 500;
-      color: rgba(255, 255, 255, 0.45);
+      color: rgba(0, 0, 0, 0.45);
     }
   }
 }

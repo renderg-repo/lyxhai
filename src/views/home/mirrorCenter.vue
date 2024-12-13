@@ -333,7 +333,7 @@
                 v-for="(tag, index) in phoneList" 
                 :key="index" 
                 class="tag-item flex-align-center flex-between">
-                <span class="cf85">{{ tag }}</span> 
+                <span class="wcf85">{{ tag }}</span> 
                 <div class="tag-close" @click="removeTag(index)"></div>
               </div>
             </div>

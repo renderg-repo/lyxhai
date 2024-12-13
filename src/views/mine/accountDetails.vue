@@ -158,29 +158,33 @@
         </el-table-column>
         <el-table-column fixed="right" label="账单详情" min-width="150px">
           <template #default="scope">
-            <el-popover :offset="5" width="auto" popper-class="filterPop" popper-style="padding:30px !important;"
+            <el-popover 
+              :offset="5" 
+              width="auto" 
+              popper-class="filterPop" 
+              popper-style="padding:30px !important;"
               :show-arrow="false" placement="bottom-start">
               <template #reference>
                 <el-link type="primary" :underline="false">账单详情</el-link>
               </template>
               <div class="detail">
                 <div class="item">
-                  <span class="label">资源名称：</span>
-                  <span class="value">{{ scope.row.resourceName }}</span>
+                  <span class="label fc85">资源名称：</span>
+                  <span class="value fc85">{{ scope.row.resourceName }}</span>
                 </div>
                 <div class="hr"></div>
                 <div class="item" v-if="!scope.row.type">
-                  <span class="label">计费周期：</span>
-                  <span class="value">
+                  <span class="label fc85">计费周期：</span>
+                  <span class="value fc85">
                     {{ scope.row.chargeFrom }} 至 {{ scope.row.chargeTo }}</span>
                 </div>
                 <div class="item" v-if="!scope.row.type">
-                  <span class="label">计费时长：</span>
-                  <span class="value"> {{ (scope.row.expendTimes).toFixed(2) }}小时</span>
+                  <span class="label fc85">计费时长：</span>
+                  <span class="value fc85"> {{ (scope.row.expendTimes).toFixed(2) }}小时</span>
                 </div>
                 <div class="item" v-if="!scope.row.type">
-                  <span class="label"> 扣费原因：</span>
-                  <span class="value">
+                  <span class="label fc85"> 扣费原因：</span>
+                  <span class="value fc85">
                     {{ dictMate("chargeReason", scope.row.chargeReason) }}({{ dictMate("product", scope.row.product) }})
                   </span>
                 </div>
@@ -507,7 +511,7 @@ async function handleExport() {
     font-size: 18px;
     font-weight: 700;
     line-height: 28px;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 
   .content {
@@ -632,7 +636,7 @@ async function handleExport() {
 
 .des {
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(0, 0, 0, 0.45);
 }
 
 :deep(.el-range-separator) {
@@ -646,11 +650,11 @@ async function handleExport() {
         display: inline-block;
         width: 80px;
         text-align: right;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(0, 0, 0, 0.6);
       }
 
       .value {
-        color: rgba(255, 255, 255, 0.85);
+        color: rgba(0, 0, 0, 0.85);
       }
 
       margin-bottom: 20px;
@@ -670,6 +674,6 @@ async function handleExport() {
 }
 
 :deep(.el-table-fixed-column--right) {
-  background-color: #1d222a !important;
+  background-color: #e9ebee !important;
 }
 </style>

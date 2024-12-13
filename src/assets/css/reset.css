@@ -26,7 +26,7 @@ body {
   background-color: #0b1320 !important;
 }
 .el-picker__popper.el-popper .el-picker-panel {
-  background-color: #0b1320;
+  background-color: #E1E2E4;
 }
 .el-tabs__item:hover {
   color: var(--el-color-primary) !important;

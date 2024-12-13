@@ -261,7 +261,7 @@ fetchDicts();
       padding-bottom: 14px;
 
       .el-descriptions__label {
-        --el-text-color-primary: rgba(255, 255, 255, 0.3);
+        --el-text-color-primary: rgba(0, 0, 0, 0.3);
         display: inline-block;
         width: 74px;
         text-align: right;
@@ -270,7 +270,7 @@ fetchDicts();
       }
 
       .el-descriptions__content {
-        --el-text-color-regular: rgba(255, 255, 255, 0.6);
+        --el-text-color-regular: rgba(0, 0, 0, 0.6);
 
 
       }
@@ -279,7 +279,7 @@ fetchDicts();
     }
 
     .content_tip {
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(0, 0, 0, 0.3);
       font-size: 12px;
       line-height: 17px;
       display: flex;

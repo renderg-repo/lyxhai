@@ -103,14 +103,10 @@
           <el-col :span="11">
             <div class="title">请向以下账户转账</div>
             <div v-if="bankInfo" class="card info">
-              <el-button class="ghostbtn" style="position: absolute;right: 40px;height: 40px"  @click="copyText">复制转账信息</el-button>
+              <el-button class="ghostbtn" 
+                style="position: absolute; right: 40px;height: 40px; color: RGBA(255, 255, 255, 0.85)"  
+                @click="copyText">复制转账信息</el-button>
               <div ref="copyEle">
-                <!-- <div class="eopy">
-                  {{ bankInfo[0] }}
-               
-                  <div class="lh26">{{ bankInfo[0] }}</div>
-                  <el-button class="ghostbtn" style="height: 40px;" @click="copyText">复制转账信息</el-button>
-                </div> -->
                 <div class="lh26">{{ bankInfo[0] }}</div>
                 <div class="lh26">{{ bankInfo[1] }}</div>
                 <div class="lh26">{{ bankInfo[2] }}</div>
@@ -1152,7 +1148,7 @@ watch(
 <style lang="less" scoped>
 .recharge {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(0, 0, 0, 0.6);
   padding: 20px 30px 20px 30px;
   margin: 0px 20px 20px 20px;
   height: calc(100% - 20px);
@@ -1163,7 +1159,7 @@ watch(
     font-size: 18px;
     height: 28px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
     line-height: 26px;
   }
 
@@ -1237,7 +1233,7 @@ watch(
 
       .other {
         .el-input__wrapper {
-          background-color: #0b1320;
+          background-color: #d7dbe2;
           width: 320px;
         }
 
@@ -1296,7 +1292,7 @@ watch(
         margin: 30px 0 20px;
         font-size: 18px;
         font-weight: 700;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(0, 0, 0, 0.6);
       }
 
       .card {
@@ -1393,7 +1389,7 @@ watch(
         align-items: center;
 
         .el-input__wrapper {
-          background: #0b1320;
+          background: #d7dbe2;
           box-shadow: none;
         }
       }
@@ -1738,7 +1734,7 @@ watch(
     line-height: 46px;
     font-size: 14px;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 
   .is-active {
@@ -1756,7 +1752,7 @@ watch(
     }
 
     .el-form-item__label {
-      color: rgba(255, 255, 255, 0.6);
+      color: rgba(0, 0, 0, 0.6);
       justify-content: flex-start;
     }
 
@@ -1795,7 +1791,7 @@ watch(
 
     .el-radio.is-bordered.el-radio--large {
       border-color: rgba(11, 19, 32, 1);
-      background-color: rgba(11, 19, 32, 1);
+      background-color: #D7DBE2;
     }
 
     .el-radio.is-bordered.is-checked {

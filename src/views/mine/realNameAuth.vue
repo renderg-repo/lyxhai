@@ -645,7 +645,7 @@ onBeforeUnmount(() => {
         line-height: 24px;
 
         .el-descriptions__label {
-          --el-text-color-primary: rgba(255, 255, 255, 0.6);
+          --el-text-color-primary: rgba(0, 0, 0, 0.6);
           display: inline-block;
           width: 90px;
           text-align: right;
@@ -653,10 +653,10 @@ onBeforeUnmount(() => {
         }
 
         .el-descriptions__content {
-          --el-text-color-regular: rgba(255, 255, 255, 0.85);
+          --el-text-color-regular: rgba(0, 0, 0, 0.85);
 
           .content_tip {
-            color: rgba(255, 255, 255, 0.3);
+            color: rgba(0, 0, 0, 0.3);
             font-size: 12px;
             line-height: 17px;
             margin-left: 90px;
@@ -776,7 +776,7 @@ onBeforeUnmount(() => {
     .des {
       font-weight: 400;
       font-size: 12px;
-      color: rgba(255, 255, 255, 0.3);
+      color: rgba(0, 0, 0, 0.3);
       line-height: 17px;
       margin: 8px 0 20px;
     }
