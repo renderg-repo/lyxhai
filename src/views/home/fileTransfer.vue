@@ -3,7 +3,12 @@
     <div class="row">
       <div class="title">
         网盘
-        <el-popover popper-class="notice_pop" placement="bottom-start" :offset="10" trigger="hover" width="auto">
+        <el-popover 
+          popper-class="notice_pop" 
+          placement="bottom-start" 
+          :offset="10" 
+          trigger="hover" 
+          width="auto">
           <template #reference>
             <i style="font-size: 20px" class="spacehpc_iconfont hpc_basic_icon_info_circle"></i>
           </template>
@@ -13,13 +18,13 @@
                     style="color: #ff4a4a">将被删除。</span></span>
               </li>
               <li><span class="li-content">
-                  各计算区内的数据是独立存储的，<span style="color: RGBA(219, 220, 222, 1)">不能进行跨区数据共享或传输。</span></span>
+                  各计算区内的数据是独立存储的，<span style="color: RGBA(163, 163, 163, 1)">不能进行跨区数据共享或传输。</span></span>
               </li>
 
               <li>
                 <span class="li-content">
                   网盘目录将自动挂载在GPU容器中，Linux系统<span
-                    style="color: #dddedf">挂载目录为/mnt/storage</span>,Windows系统自动挂载到资源管理器。</span>
+                    style="color: #a3a3a3">挂载目录为/mnt/storage</span>,Windows系统自动挂载到资源管理器。</span>
               </li>
               <li> <span class="li-content"> 网页暂不支持4G 以上文件上传，推荐使用<span class="linkbtn"
                     @click="downloadXFTP">XFTP</span>工具。</span>
@@ -308,7 +313,7 @@ function initStorageAccountbtn(item) {
     font-size: 14px;
     padding: 10px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(0, 0, 0, 0.85);
 
     .li-content {
       margin-left: -8px;

@@ -2,13 +2,21 @@
   <div class="container">
     <div class="row">
       <div class="title">
-       <div class="lh26">镜像</div>  
-        <el-popover popper-class="notice_pop" placement="right" :offset="10" trigger="hover" :width="560">
+       <div class="lh26 cf85">镜像</div>  
+        <el-popover 
+          popper-class="notice_pop" 
+          placement="right" 
+          :offset="10" 
+          trigger="hover" 
+          hide-after="999999"
+          :width="560">
           <template #reference>
-            <i style="font-size: 20px" class="spacehpc_iconfont hpc_basic_icon_info_circle"></i>
+            <i 
+              style="font-size: 20px; color: rgba(0, 0, 0, 0.85)" 
+              class="spacehpc_iconfont hpc_basic_icon_info_circle"></i>
           </template>
           <div class="notice_card">
-            <div class="notice_content">
+            <div class="notice_content fc85">
               <li>
                 若账户连续 1 个月未登录，将导致镜像数据被永久删除。
               </li>
@@ -66,7 +74,7 @@
       header-row-class-name="table_top"
       row-class-name="table_cell" 
       :row-style="{ height: '126px' }" 
-      element-loading-background="rgb(29, 34, 42, 0.8)"
+      element-loading-background="rgb(255, 255, 255, 0.8)"
       :data="tableData"
       v-loading="loading">
       <el-table-column label="镜像名称/ID" property="name" width="240">
@@ -82,7 +90,7 @@
               @click="handleEditHostname($event, row.id)"></i>
           </div>
           <div class="flex justity-between">
-            <div style="color: rgba(255, 255, 255, 0.45)">{{ row.imgUniqName }}</div>
+            <div style="color: rgba(0, 0, 0, 0.45)">{{ row.imgUniqName }}</div>
             <i v-if="row.status != 'destroy'" class="spacehpc_iconfont hpc_gpu_icon_copy copy_icon"
               @click="copyClick(`${row.imgUniqName}`)"></i>
           </div>
@@ -254,8 +262,9 @@
               margin: 3px 12px 0 0;
               color: #DF444D;
               font-size: 20px;
-            " class="spacehpc_iconfont hpc_basic_icon_info_filled"></i><span class="cf85"
-            style="font-size: 16px">{{ DialoVisible.title }}</span>
+            " class="spacehpc_iconfont hpc_basic_icon_info_filled"></i>
+            <span 
+            style="font-size: 16px; color: rgba(255, 255, 255, 0.85); ">{{ DialoVisible.title }}</span>
         </div>
       </template>
       <div class="flex">
@@ -311,12 +320,12 @@
       v-model="dialogShareVisible">
       <template #header="{ close }">
         <div class="my-header">
-          <p class="cf85 " >分享管理</p>
+          <p class="wcf85 " >分享管理</p>
           <el-icon  @click="close"><Close /></el-icon>
         </div>
       </template>
       <div class="dialog-main">
-        <p class="cf85 mb10">分享镜像给他人</p>
+        <p class="wcf85 mb10">分享镜像给他人</p>
         <div class="flex mb10 align-start">
           <div class="input-container">
             <div :class="phoneList.length ? 'tags' : ''">
@@ -339,11 +348,11 @@
           <div class="share-button" v-if="sharePost" @click="shareClick"><img src="@/assets/images/send_normal.svg" alt=""></div>
           <div class="share-button" v-else><img class="loading-circle" src="@/assets/images/loading_circle.svg" alt=""></div>
         </div>
-        <p class="cf85 mb10">当前已分享(对方接收后显示)</p>
+        <p class="wcf85 mb10">当前已分享(对方接收后显示)</p>
         <div class="share-list-box mb10">
           <ul v-if="shareList.length > 0">
             <li v-for="(item, index) in shareList" :key="index" class="flex-between flex-align-center">
-              <p class="">{{ item.phone ? item.phone : '' }}</p>
+              <p class="wcf85">{{ item.phone ? item.phone : '' }}</p>
               <el-icon class="close-icon" style="color: #df444d" @click="deleteBtn(item, index)"><Close /></el-icon>
             </li>
           </ul>
@@ -351,7 +360,7 @@
         </div>
         <div class="flex-between">
           <div class="flex flex-align-center">
-            <p class="cf85 mr10">分享已开启</p>
+            <p class="wcf85 mr10">分享已开启</p>
             <el-switch 
               size="small" 
               v-model="shareSwitch" 
@@ -372,21 +381,21 @@
       v-model="dialogCrossVisible">
       <template #header="{ close }">
         <div class="my-header">
-          <p class="cf85 " >镜像：<span style="font-size: 14px">{{ crossItem.imgName }}</span></p>
+          <p class="wcf85" >镜像：<span style="font-size: 14px">{{ crossItem.imgName }}</span></p>
           <el-icon  @click="close"><Close /></el-icon>
         </div>
       </template>
       <div class="dialog-main">
         <div class="cross-tips">
           <i class="icon hpc_basic_icon_info_filled" style="margin-top: 1px; color: #2696FF"></i>
-          <span class="cf85 ml10">每天只能进行3次同步操作，请悉知！</span>
+          <span class="wcf85 ml10">每天只能进行3次同步操作，请悉知！</span>
         </div>
         <div class="cross-zone">
-          <p class="cf6">管理镜像同步区域：</p>
+          <p class="wcf6">管理镜像同步区域：</p>
           <ul>
             <li class="cross-zone-item" v-for="(item, index) in syncZone" :key="index">
               <div class="cross-zone-item-label">
-                <p>{{ matchArea(item.zoneName) }}：</p> <span class="cf6"> 
+                <p class="wcf85">{{ matchArea(item.zoneName) }}：</p> <span class="wcf6"> 
                   （{{ match(item.status) }}<span v-if="item.progress">: {{ item.progress }} %</span>） 
                 </span>
               </div>
@@ -847,7 +856,7 @@ function handleSizeChange(size) {
 let imglistt;
 function startPolling() {
   imglistt = setInterval(() => {
-    getlist();
+    // getlist();
     // if (dialogCrossVisible.value) {
     //   handleSyn(crossItem.value)
     // }
@@ -1169,6 +1178,12 @@ function crossDialogClose() {
 @import '../../assets/css/mirrorCenter.less';
 </style>
 <style lang="less" scoped>
+:deep(.el-table) {
+  --el-table-border-color: #26303e;
+}
+:deep(.el-table__row.table_cell) {
+  border-bottom: 1px solid #000;
+}
 .el-popover.el-popper {
   border: none !important;
   background: #e9ebee !important;
@@ -1182,6 +1197,9 @@ function crossDialogClose() {
 }
 :deep(.shareDialog) {
   --el-dialog-padding-primary: 0;
+  .el-icon {
+    color: #fff;
+  }
 }
 .my-header {
   display: flex;
@@ -1236,7 +1254,7 @@ function crossDialogClose() {
     font-size: 14px;
     padding: 15px 8px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.6);
   }
 }
 

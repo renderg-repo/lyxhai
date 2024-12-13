@@ -131,7 +131,7 @@ body {
   color: #df444d;
 }
 .el-table__row:hover {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.3);
 }
 .el-table__row:hover .del_text {
   color: #ff5761;
@@ -173,6 +173,7 @@ body {
   --el-fill-color: #1a2940;
 }
 .el-dialog__close.el-icon {
+  color: #fff;
   font-size: 24px !important;
   font-weight: bolder;
 }

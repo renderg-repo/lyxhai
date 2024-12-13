@@ -360,7 +360,7 @@
           </div>
         </div>
         <div class="dialogFooter flex-end" v-if="dialogType == 'create'">
-          <el-button class="ghostbtn" @click="cancelButton()">取消</el-button>
+          <el-button class="ghostbtn newbtn" @click="cancelButton()">取消</el-button>
           <el-button class="primarybtn" type="primary" @click="createFolder1(false)">确定</el-button>
         </div>
         <div class="dialogFooter flex-end" v-if="dialogType == 'edit'">
@@ -1416,8 +1416,9 @@ async function handleBatchMove(i) {
 
     .upOperate {
       position: absolute;
-      top: 242px;
-      left: 635px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1427,7 +1428,7 @@ async function handleBatchMove(i) {
         font-size: 18px;
         font-weight: 400;
         height: 28px;
-        color: rgba(255, 255, 255, 0.6);
+        color: rgba(0, 0, 0, 0.6);
       }
 
       .or {
@@ -1435,7 +1436,7 @@ async function handleBatchMove(i) {
         font-size: 14px;
         font-weight: 400;
         height: 22px;
-        color: rgba(255, 255, 255, 0.3);
+        color: rgba(0, 0, 0, 0.3);
       }
 
       .actions {

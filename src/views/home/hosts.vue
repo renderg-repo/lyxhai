@@ -2665,7 +2665,7 @@ export default {
     font-size: 14px;
     padding: 8px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(0, 0, 0, 0.85);
   }
 }
 </style>

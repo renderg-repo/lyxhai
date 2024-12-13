@@ -710,7 +710,7 @@
   color: #69b7ff !important;
 }
 .el-table--enable-row-hover .el-table__body tr:hover > td.el-table__cell {
-  background-color: #26303e !important;
+  background-color: #D7DBE2 !important;
 }
 .filterPop .el-checkbox__inner:hover {
   border-color: #2696ff !important;
