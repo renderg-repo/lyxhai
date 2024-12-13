@@ -16,11 +16,14 @@
             <div class="file-title">
               <div class="title">上传列表</div>
               <div class="operate">
-                <el-button :title="collapse ? '展开' : '折叠'" link @click="collapse = !collapse">
-                  <Icon :icon="collapse ? 'ri:fullscreen-fill' : 'ri:subtract-fill'" width="18" />
+                <el-button 
+                  :title="collapse ? '展开' : '折叠'" 
+                  link 
+                  @click="collapse = !collapse">
+                  <Icon :icon="collapse ? 'ri:fullscreen-fill' : 'ri:subtract-fill'" width="18" style="color: #fff;" />
                 </el-button>
                 <el-button title="关闭" link @click="close('upload')">
-                  <Icon icon="ri:close-fill" width="20" />
+                  <Icon icon="ri:close-fill" width="20" style="color: #fff;" />
                 </el-button>
               </div>
             </div>
@@ -544,7 +547,9 @@ export default {
       line-height: 40px;
       padding: 0 15px;
       border-bottom: 1px solid #000;
-
+      .title {
+        color: rgba(255, 255, 255, 0.8);
+      }
       .operate {
         flex: 1;
         text-align: right;

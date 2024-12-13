@@ -5,7 +5,7 @@
         <el-breadcrumb-item 
           :to="{ path: '/fileTransfer' }" 
           @click="fetchData()">
-          <span class="bread-item" style="font-size: 14px">{{ props.breadLabel }}</span>
+          <span class="bread-item" style="font-size: 14px; color: rgba(0, 0, 0, 0.8)">{{ props.breadLabel }}</span>
         </el-breadcrumb-item>
         <el-breadcrumb-item 
           v-for="(path, i) in paths"
@@ -1717,7 +1717,6 @@ async function handleBatchMove(i) {
     padding-top: 20px;
     justify-content: space-between;
     align-items: center;
-
     .add {
       display: flex;
       align-items: center;
@@ -1791,6 +1790,10 @@ async function handleBatchMove(i) {
     font-size: 14px;
     height: 32px;
     font-weight: 500;
+    &.ghostbtn {
+      --el-border-color: rgba(255, 255, 255, 0.15);
+      color: rgba(255, 255, 255, 0.85);
+    }
   }
 
   .el-button--primary {
@@ -1833,7 +1836,7 @@ async function handleBatchMove(i) {
     font-family: Source Han Sans, Source Han Sans;
     font-size: 14px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(0, 0, 0, 0.85);
     cursor: pointer;
     margin-bottom: 10px;
     height: 32px;
@@ -1847,6 +1850,7 @@ async function handleBatchMove(i) {
 
   .plusAction:hover {
     background: #2156b3;
+    color: rgba(255, 255, 255, 0.85);
   }
 }
 

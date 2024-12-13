@@ -1,6 +1,6 @@
 <template>
   <el-dialog class='GlobalDialog' v-model="visible" :title="dialogdata.dialogTitle" :show-close="false"
-    :style="`width: ${dialogwidth};  padding: 15px 20px !important;`">
+    :style="`width: ${dialogwidth};  padding: 15px 20px !important; color: #fff`">
     <div v-if="dialogdata.type == 'img'" class="imgbox">
       <div class="box"><img :src="dialogdata.bodyContent" :width="dialogdata.width" alt=""></div>
       <div class="text-center">{{ dialogdata.footerContent }}</div>
@@ -58,7 +58,16 @@ const confirmDialog = () => {
 };
 </script>
 
+<style lang="less">
+.GlobalDialog {
+  .el-dialog__header .el-dialog__title {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
+</style>
+
 <style lang="less" scoped>
+
 .imgbox {
   display: flex;
   justify-content: center;

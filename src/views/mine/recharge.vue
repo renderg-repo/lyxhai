@@ -1180,7 +1180,7 @@ watch(
       height: 110px;
       margin: 30px 30px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0, 0, 0, 0.1);
     }
 
     .img {
@@ -1217,7 +1217,7 @@ watch(
     .online {
       .amount {
         .el-radio__label {
-          color: #ffffff;
+          color: rgba(0, 0, 0, 0.65);
           font-size: 24px;
           padding-left: 18px;
           margin-top: 10px
@@ -1227,7 +1227,7 @@ watch(
           font-size: 36px;
           line-height: 35px;
           font-weight: 400;
-          color: #ffffff;
+          color: rgba(0, 0, 0, 0.65);
         }
       }
 
@@ -1235,6 +1235,10 @@ watch(
         .el-input__wrapper {
           background-color: #d7dbe2;
           width: 320px;
+          ::placeholder {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.3) !important;
+          }
         }
 
         .amountinput {
