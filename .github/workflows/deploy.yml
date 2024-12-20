@@ -25,12 +25,18 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Install sshpass
-        run: sudo apt-get install -y sshpass
+      - name: Install SSH key
+        run: |
+          mkdir -p ~/.ssh/
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -H 8.130.124.23 >> ~/.ssh/known_hosts
+          # Debug steps
+          echo "SSH directory contents:"
+          ls -la ~/.ssh/
+          echo "Testing SSH connection..."
+          ssh -v -o StrictHostKeyChecking=no root@8.130.124.23 'echo "SSH test"'
 
       - name: Deploy to server
-        env:
-          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
         run: |
-          export SSHPASS=$SSH_PASSWORD
-          sshpass -e scp -o StrictHostKeyChecking=no -r dist/* root@8.130.124.23:/var/www/lyxhai.com/
+          scp -r dist/* root@8.130.124.23:/var/www/lyxhai.com/
