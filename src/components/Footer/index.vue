@@ -70,7 +70,7 @@ export default {
   data() {
     return {
       // localhost: 'spacehpc.com',
-      number: '浙ICP备2020049003号-1',
+      number: '浙ICP备2020034496号-10',
       platformList: [{
           image: require("../../assets/images/public/douyin-icon.png"),
           url: "https://www.douyin.com/user/MS4wLjABAAAA6JtigcRTN5A4yY-IOqimKbbJcfGrobP-avfNbV_T5veCK8eI8nyQ24zgBAgzFt_1",
