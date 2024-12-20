@@ -31,6 +31,10 @@ jobs:
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 8.130.124.23 >> ~/.ssh/known_hosts
+          # Debug steps
+          ls -la ~/.ssh/
+          echo "Testing SSH connection..."
+          ssh -v -o StrictHostKeyChecking=no root@8.130.124.23 'echo "SSH test"'
 
       - name: Deploy to server
         run: |
