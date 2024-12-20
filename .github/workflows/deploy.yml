@@ -25,17 +25,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Install SSH key
-        run: |
-          mkdir -p ~/.ssh/
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 8.130.124.23 >> ~/.ssh/known_hosts
-          # Debug steps
-          ls -la ~/.ssh/
-          echo "Testing SSH connection..."
-          ssh -v -o StrictHostKeyChecking=no root@8.130.124.23 'echo "SSH test"'
-
       - name: Install sshpass
         run: sudo apt-get install -y sshpass
 
