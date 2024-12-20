@@ -53,10 +53,10 @@ export default {
     // 立即注册
     registerClick() {
       if (this.phone) {
-        let url = `${this.$config.basicUrl}/user/register?phone=${this.phone}`
+        let url = `${this.$config.pageUrlPro}/user/register?phone=${this.phone}`
         window.open(url, '_blank');
       } else {
-        window.open(`${this.$config.basicUrl}/user/register`, '_blank');
+        window.open(`${this.$config.pageUrlPro}/user/register`, '_blank');
       }
     }
   },

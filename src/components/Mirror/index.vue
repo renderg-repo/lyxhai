@@ -588,9 +588,9 @@ export default {
     handleDeployment() {
       var url
       if (this.dialogData.imgType == 2) {
-        url = `${this.$config.basicUrl}/create?imgType=${this.dialogData.imgType}&myImgId=${this.dialogData.id}`
+        url = `${this.$config.pageUrlPro}/create?imgType=${this.dialogData.imgType}&myImgId=${this.dialogData.id}`
       } else {
-        url = `${this.$config.basicUrl}/create?imgType=${this.dialogData.imgType}&osName=${this.dialogData.imgName}`;
+        url = `${this.$config.pageUrlPro}/create?imgType=${this.dialogData.imgType}&osName=${this.dialogData.imgName}`;
       }
       
       window.open(url, '_blank');

@@ -387,7 +387,7 @@ export default {
     // 跳转
     handleToPath(url) {
       try {
-        let to_path = this.$config.basicUrl + url;
+        let to_path = this.$config.pageUrlPro + url;
         if (url === '/user/register') {
           if (this.registerPhone) {
             to_path += `?phone=${this.registerPhone}`

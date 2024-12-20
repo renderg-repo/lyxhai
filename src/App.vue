@@ -33,7 +33,7 @@ export default {
     handleMessage(event) {
       try {
         // console.log(event)
-        if (event.origin === this.$config.basicUrl) {
+        if (event.origin === this.$config.pageUrlPro) {
           if (event.data.type === 'LOGIN_SUCCESS') {
             // 将获取到的token信息存储在本地
             this.$store.dispatch('setTokenInfo', event.data)

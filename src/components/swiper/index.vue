@@ -9,12 +9,10 @@
         </div>
         <div class="swiper-description">
           <h2 class="swiper-subhead" style="font-size: 90px; line-height: 120px;">专为AI而生产的<br/>高性能云</h2>
-          <a href="" target="_blank">
-            <div class="swiper-start-btn1 flex-align-center flex-between">
-              <span>立即开始</span>
-              <img src="../../assets/images/swiper/vector.svg" alt="">
-            </div>
-          </a>
+          <div @click="toPath" class="swiper-start-btn1 flex-align-center flex-between">
+            <span>立即开始</span>
+            <img src="../../assets/images/swiper/vector.svg" alt="">
+          </div>
         </div>
       </el-carousel-item>
       <el-carousel-item >
@@ -23,12 +21,10 @@
           <h2 class="swiper-title">释放计算潜力</h2>
           <p class="swiper-subhead ft80">GPU云平台助力创新</p>
           <p class="swiper-desc">轻松获取强大计算资源，满足深度学习、数据分析和图形渲染的各种需求</p>
-          <a href="" target="_blank">
-            <div class="swiper-start-btn">
-              <span>立即开始</span>
-              <i class="el-icon-arrow-right"></i>
-            </div>
-          </a>
+          <div class="swiper-start-btn" @click="toPath" >
+            <span>立即开始</span>
+            <i class="el-icon-arrow-right"></i>
+          </div>
         </div>
       </el-carousel-item>
       <el-carousel-item >
@@ -37,35 +33,11 @@
           <h2 class="swiper-title" style="font-size: 64px;">RTX 4090 算力租赁</h2>
           <p class="swiper-subhead" style="font-size: 90px;">低至1.76元/<span style="font-size: 50px;">卡/时</span> </p>
           <p class="swiper-desc">多款高性能GPU灵活供应，超值性价比 <br/>助力AI项目快速启动</p>
-          <a href="" target="_blank">
-            <div class="swiper-start-btn">
-              <span>立即开始</span>
-              <i class="el-icon-arrow-right"></i>
-            </div>
-          </a>
-        </div>
-      </el-carousel-item>
-    </el-carousel>
-    <el-carousel class="show-down-and-md" :interval="5000" arrow="never" :autoplay="false">
-      <el-carousel-item v-for="item in bannerList" :key="item.id">
-        <div class="swiper-description">
-          <p class="swiper-title">{{ item.title }}</p>
-          <p class="swiper-desc">{{ item.desc_first }}</p>
-          <p class="swiper-desc">{{ item.desc_second }}</p>
-          <div class="start-btn swiper-start-btn" @click="handleClickStart(item.id)" @mouseenter="item.hover = true" @mouseleave="item.hover = false">
-            {{ item.btn_text }}
-            <img class="start-btn-icon" :src="item.hover ? item.icon_hover_url : item.icon_url"/>
+          <div class="swiper-start-btn" @click="toPath" >
+            <span>立即开始</span>
+            <i class="el-icon-arrow-right"></i>
           </div>
         </div>
-        <template v-if="screenWidth > 900">
-          <img :src="item.image_md" class="banner-img" />
-        </template>
-        <template v-else-if="screenWidth > 600 && screenWidth <= 900">
-          <img :src="item.image_sm" class="banner-img" />
-        </template>
-        <template v-if="screenWidth <= 600">
-          <img :src="item.image_xs" class="banner-img" />
-        </template>
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -146,13 +118,16 @@ export default {
       console.log('id', id)
       var url
       if (id == 1) {
-        url = this.$config.basicUrl + "/user/login";
+        url = this.$config.pageUrlPro + "/user/login";
       } else if (id == 2) {
-        url = this.$config.basicUrl + "/user/register";
+        url = this.$config.pageUrlPro + "/user/register";
       } else {
         url = 'https://help.spacehpc.com/document/activities/invitation_rewards_program/invitation_rewards_program.html'
       }
       window.open(url, "_blank");
+    },
+    toPath () {
+      window.open(`${this.$config.pageUrlPro}/user/login`, '_blank')
     }
   },
 }

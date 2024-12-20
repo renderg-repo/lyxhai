@@ -62,7 +62,7 @@ export default {
     },
     // 立即前往
     toPath(url) {
-      window.open(`${this.$config.basicUrl}/user/login`, '_blank');
+      window.open(`${this.$config.pageUrlPro}/user/login`, '_blank');
     },
   },
 }

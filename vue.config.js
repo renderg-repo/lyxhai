@@ -5,21 +5,21 @@ module.exports = {
   lintOnSave: false,
   // baseUrl : './',
   publicPath: process.env.NODE_ENV === 'production' ? "././" : "./",
-  chainWebpack:config => {
-    config
-    .module
-    .rule("images")
-    .test(/\.(jpg|png|gif)$/)
-    .use("url-loader")
-    .loader("url-loader")
-    .options({
-      limit:10,
-      publicPath: process.env.NODE_ENV === 'production' ? 'https://cdn.spacehpc.com/img/' : "img/" ,
-      outputPath: 'img',
-      name: '[name].[ext]',
-    })
-    .end();
-  },
+  // chainWebpack:config => {
+  //   config
+  //   .module
+  //   .rule("images")
+  //   .test(/\.(jpg|png|gif)$/)
+  //   .use("url-loader")
+  //   .loader("url-loader")
+  //   .options({
+  //     limit:10,
+  //     publicPath: process.env.NODE_ENV === 'production' ? '../dist/img/' : "img/" ,
+  //     outputPath: 'img',
+  //     name: '[name].[ext]',
+  //   })
+  //   .end();
+  // },
 //   build: {
 //     env: require('./prod.env'),
 //     index: path.resolve(__dirname, '../dist/index.html'),
