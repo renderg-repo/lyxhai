@@ -28,13 +28,18 @@ jobs:
       - name: Install SSH key
         run: |
           mkdir -p ~/.ssh/
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          # Write key with proper line endings
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | sed 's/\\n/\n/g' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H 8.130.124.23 >> ~/.ssh/known_hosts
           # Debug steps
+          echo "SSH directory contents:"
           ls -la ~/.ssh/
+          echo "First and last line of key file (to verify format):"
+          head -n 1 ~/.ssh/id_rsa
+          tail -n 1 ~/.ssh/id_rsa
           echo "Testing SSH connection..."
-          ssh -v -o StrictHostKeyChecking=no root@8.130.124.23 'echo "SSH test"'
+          ssh -vvv -o StrictHostKeyChecking=no root@8.130.124.23 'echo "SSH test"'
 
       - name: Deploy to server
         run: |
