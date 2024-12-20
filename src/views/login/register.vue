@@ -349,6 +349,11 @@ const submitClick = () => {
       "Tenant-ID": "0",
     };
   }
+  if (import.meta.env.VITE_APP === "longyou") {
+    config.headers = {
+      "Tenant-ID": "0",
+    };
+  }
   errorText.value = "";
   smsCodetext.value = "";
   if (current_step.value == 1) {
@@ -431,7 +436,7 @@ const submitClick = () => {
         });
 
         mineStore.tokenInfo = res.data;
-        Cookies.set("tokenInfo", JSON.stringify(res.data), { domain: '.spacehpc.com', path: '/' });
+        Cookies.set("tokenInfo", JSON.stringify(res.data), { domain: '.lyxhai.com', path: '/' });
         // Cookies.set("tokenHead", res.data.tokenHead, { domain: '.spacehpc.com', path: '/' });
         // Cookies.set("token", res.data.token, {
         //   expires: res.data.expiresIn * 1000,

@@ -1150,16 +1150,6 @@
     </el-dialog>
 
   </div>
-  <div class="noticeGlobal" v-show="shownotice">
-    <div class="flex flex-1">
-      <i style=" margin: 0px 12px 0 0;color: #FF9000;  font-size: 18px;"
-        class="spacehpc_iconfont hpc_basic_icon_info_filled"></i>
-      <div class="flex flex-1">平台升级通知：访问之前创建的实例,请登录&nbsp;&nbsp;<a href="https://gpu2.spacehpc.com/"
-          Target="_blank">gpu2.spacehpc.com</a>。
-        <div style="margin-left: auto;" class="linkbtn" @click="findOutMore">查看详情</div>
-      </div>
-    </div>
-  </div>
   <!-- <GlobalDialog /> -->
 </template>
 <script>

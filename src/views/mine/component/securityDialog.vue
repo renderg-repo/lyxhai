@@ -809,10 +809,10 @@ function updatePasswordFn(obj) {
       messageTip(1, res);
       if (res.code == 200) {
         setTimeout(() => {
-          Cookies.remove("token", { domain: '.spacehpc.com', path: '/' })
-          Cookies.remove("name", { domain: '.spacehpc.com', path: '/' })
-          Cookies.remove("tokenHead", { domain: '.spacehpc.com', path: '/' })
-          Cookies.remove('tokenInfo', { domain: '.spacehpc.com', path: '/' })
+          Cookies.remove("token", { domain: '.lyxhai.com', path: '/' })
+          Cookies.remove("name", { domain: '.lyxhai.com', path: '/' })
+          Cookies.remove("tokenHead", { domain: '.lyxhai.com', path: '/' })
+          Cookies.remove('tokenInfo', { domain: '.lyxhai.com', path: '/' })
           mineStore.tokenInfo = {};
           router.push({ path: `/user/login` });
         }, 3000);

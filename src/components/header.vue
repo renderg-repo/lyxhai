@@ -217,16 +217,16 @@ const accountClick = () => {
 };
 
 const websiteClick = () => {
-  window.open("https://www.spacehpc.com/", "_blank");
+  window.open("http://www.lyxhai.com/", "_blank");
 };
 
 const loginOut = () => {
   globalUploader.value.panelShow = false;
   // 退出时清除cookies
-  Cookies.remove("token", { domain: '.spacehpc.com', path: '/' })
-  Cookies.remove("name", { domain: '.spacehpc.com', path: '/' })
-  Cookies.remove("tokenHead", { domain: '.spacehpc.com', path: '/' })
-  Cookies.remove("tokenInfo", { domain: '.spacehpc.com', path: '/' })
+  Cookies.remove("token", { domain: '.lyxhai.com', path: '/' })
+  Cookies.remove("name", { domain: '.lyxhai.com', path: '/' })
+  Cookies.remove("tokenHead", { domain: '.lyxhai.com', path: '/' })
+  Cookies.remove("tokenInfo", { domain: '.lyxhai.com', path: '/' })
   sessionStorage.clear()
   mineStore.tokenInfo = {};
   // 发送退出登录消息到另一个网页
@@ -234,7 +234,7 @@ const loginOut = () => {
     const message = {
       type: "EXIT_SUCCESS"
     };
-    const targetOrigin = "https://www.spacehpc.com"; // 确保这是正确的目标源
+    const targetOrigin = "https://www.lyxhai.com"; // 确保这是正确的目标源
     
     // 检查 window.opener 是否存在
     if (window.opener) {

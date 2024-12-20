@@ -243,7 +243,7 @@ const submitClick = async () => {
       isError.value = false;
       loginFailFlag.value = false;
       mineStore.tokenInfo = res.data;
-      Cookies.set("tokenInfo", JSON.stringify(res.data), { domain: '.spacehpc.com', path: '/' })
+      Cookies.set("tokenInfo", JSON.stringify(res.data), { domain: '.lyxhai.com', path: '/' })
       // Cookies.set("tokenHead", res.data.tokenHead, { domain: '.spacehpc.com', path: '/' });
       // Cookies.set("token", res.data.token, {
       //   expires: res.data.expiresIn * 1000,
@@ -408,7 +408,7 @@ const scanClick = () => {
             });
             loginFailFlag.value = false;
             mineStore.tokenInfo = check.data;
-            Cookies.set("tokenInfo", JSON.stringify(check.data), { domain: '.spacehpc.com', path: '/' });
+            Cookies.set("tokenInfo", JSON.stringify(check.data), { domain: '.lyxhai.com', path: '/' });
             // Cookies.set("tokenHead", check.data.tokenHead, { domain: '.spacehpc.com', path: '/' });
             // Cookies.set("token", check.data.token, {
             //   expires: check.data.expiresIn * 1000,

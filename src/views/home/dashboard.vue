@@ -503,7 +503,7 @@ function getimageMarket(zoneId) {
 // getimageMarket();
 //镜像中心跳转
 const gocreate = () => {
-  window.open("https://www.spacehpc.com/mirror", "_blank");
+  window.open("http://www.lyxhai.com/mirror", "_blank");
 };
 //立即创建按钮
 function quicklyCreate() {
@@ -723,8 +723,8 @@ onMounted(() => {
           tokenHead: mine.tokenInfo.tokenHead,
           name: mine.userInfo.username,
         };
-        Cookies.set("tokenInfo", JSON.stringify(mine.tokenInfo), { domain: '.spacehpc.com', path: '/' })
-        const targetOrigin = "https://www.spacehpc.com";
+        Cookies.set("tokenInfo", JSON.stringify(mine.tokenInfo), { domain: '.lyxhai.com', path: '/' })
+        const targetOrigin = "https://www.lyxhai.com";
         // 检查 window.opener 是否存在
         if (window.opener) {
           console.log("Sending message to opener window");

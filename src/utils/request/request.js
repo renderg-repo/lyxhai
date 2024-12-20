@@ -65,7 +65,7 @@ const createService = (baseURL) => {
               mineStore.tokenInfo = result.data.data;
               console.log('mineStore', mineStore.tokenInfo)
               // .spacehpc.com
-              Cookies.set("tokenInfo", JSON.stringify(result.data.data), { domain: '.spacehpc.com', path: '/' })
+              Cookies.set("tokenInfo", JSON.stringify(result.data.data), { domain: '.lyxhai.com', path: '/' })
               // Cookies.set("tokenHead", result.data.data.tokenHead, { domain: '.spacehpc.com', path: '/' });
               // Cookies.set("token", result.data.data.token, {
               //   expires: result.data.data.expiresIn * 1000,
