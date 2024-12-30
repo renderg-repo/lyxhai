@@ -14,7 +14,7 @@ module.exports = {
     .loader("url-loader")
     .options({
       limit:10,
-      publicPath: process.env.NODE_ENV === 'production' ? 'https://cdn.spacehpc.com/img/' : "img/" ,
+      publicPath: process.env.NODE_ENV === 'production' ? 'https://cdn.lyxhai.com/img/' : "img/" ,
       outputPath: 'img',
       name: '[name].[ext]',
     })
