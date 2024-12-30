@@ -2,7 +2,10 @@
 
 .mirror {
   width: 100%;
-  background-image: url('../assets/images/public/mirror-bg.png');
+  background-image: url('../assets/images/public/background-image1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
   font-family: Source Han Sans-Regular;
 }
 .mirror-header {
