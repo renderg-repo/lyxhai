@@ -41,10 +41,10 @@ export function Query (method, url, params) {
             resolve(response.data.data);
           } else if (response.data.code === 401) {
             // 移除token
-            Cookies.remove("token", { domain: '.spacehpc.com', path: '/' })
-            Cookies.remove("name", { domain: '.spacehpc.com', path: '/' })
-            Cookies.remove("tokenHead", { domain: '.spacehpc.com', path: '/' })
-            Cookies.remove('tokenInfo', { domain: '.spacehpc.com', path: '/' })
+            Cookies.remove("token", { domain: '.lyxhai.com', path: '/' })
+            Cookies.remove("name", { domain: '.lyxhai.com', path: '/' })
+            Cookies.remove("tokenHead", { domain: '.lyxhai.com', path: '/' })
+            Cookies.remove('tokenInfo', { domain: '.lyxhai.com', path: '/' })
             store.dispatch("removeToken");
             sessionStorage.clear()
             reject("请登录后查看")

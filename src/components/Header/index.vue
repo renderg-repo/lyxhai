@@ -408,10 +408,10 @@ export default {
     // 退出
     handleExit() {
       this.removeToken();
-      Cookies.remove("token", { domain: '.spacehpc.com', path: '/' })
-      Cookies.remove("name", { domain: '.spacehpc.com', path: '/' })
-      Cookies.remove("tokenHead", { domain: '.spacehpc.com', path: '/' })
-      Cookies.remove('tokenInfo', { domain: '.spacehpc.com', path: '/' })
+      Cookies.remove("token", { domain: '.lyxhai.com', path: '/' })
+      Cookies.remove("name", { domain: '.lyxhai.com', path: '/' })
+      Cookies.remove("tokenHead", { domain: '.lyxhai.com', path: '/' })
+      Cookies.remove('tokenInfo', { domain: '.lyxhai.com', path: '/' })
       sessionStorage.clear()
       location.reload(true);
     }
