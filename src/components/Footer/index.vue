@@ -6,9 +6,9 @@
     </div>
     <div class="footer-row">
       <div class="footer-list">
-        <ul class="flex-align-center flex-between">
+        <ul class="flex-align-center flex-center">
           <li v-for="(item, index) in tabList" :key="index" >
-            <a target="_blank" v-if="index == tabList.length - 1" :href="item.path">{{item.title}}</a>
+            <a target="_blank" v-if="index == 4" :href="item.path">{{item.title}}</a>
             <router-link v-else :to="item.path">{{item.title}}</router-link>
           </li>
         </ul>

@@ -31,7 +31,7 @@
               width="300"
               trigger="click">
               <div slot="reference" class="primary-btn user-btn flex-align-center flex-center">
-                <p style="width: 12px; height: 12px; line-height: 12px;">{{ capitalizeFirstLetter(getUserName) }}</p>
+                <p style="width: 12px; height: 12px; line-height: 12px; color: #fff;">{{ capitalizeFirstLetter(getUserName) }}</p>
               </div>
               <div class="uesr-info-box">
                 <div class="info-top flex-align-center flex-around">
