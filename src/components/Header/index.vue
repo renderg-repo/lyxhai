@@ -252,7 +252,7 @@ export default {
           title: "新闻"
         },
         {
-          path: "https://help.spacehpc.com/",
+          path: "https://help.lyxhai.com",
           title: "帮助文档"
         }
       ],

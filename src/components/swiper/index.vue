@@ -122,7 +122,7 @@ export default {
       } else if (id == 2) {
         url = this.$config.pageUrlPro + "/user/register";
       } else {
-        url = 'https://help.spacehpc.com/document/activities/invitation_rewards_program/invitation_rewards_program.html'
+        url = 'https://help.lyxhai.com/document/activities/invitation_rewards_program/invitation_rewards_program.html'
       }
       window.open(url, "_blank");
     },

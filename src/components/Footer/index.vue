@@ -91,7 +91,7 @@ export default {
         { path: "/mirror", title: "镜像中心" },
         { path: "/computing", title: "算力服务器" },
         { path: "/news", title: "新闻" },
-        { path: "https://help.spacehpc.com/", title: "帮助文档" },
+        { path: "https://help.lyxhai.com", title: "帮助文档" },
         { path: "/", title: "联系我们" },
         { path: "/", title: "加入我们" },
         { path: "/", title: "关于我们" },
