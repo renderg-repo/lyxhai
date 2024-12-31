@@ -19,7 +19,7 @@
       <div class="footer-text copyright-line">
         <div class="footer-platform flex-center">
           <p class="copyright">备案号：<a target="_blank" href="https://beian.miit.gov.cn">{{number}}</a></p>
-          <p>固定电话：0570-7032679</p>
+          <p>手机号：13693374149</p>
         </div>
       </div>
       <div class="foot-apply flex-center">
