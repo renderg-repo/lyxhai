@@ -8,7 +8,7 @@
           <img src="../../assets/images/swiper/swiper-icon.png" alt="">
         </div>
         <div class="swiper-description">
-          <h2 class="swiper-subhead" style="font-size: 90px; line-height: 120px;">专为AI而生产的<br/>高性能云</h2>
+          <h2 class="swiper-subhead" style="font-size: 90px; line-height: 120px;">专为AI而生的<br/>高性能云</h2>
           <div @click="toPath" class="swiper-start-btn1 flex-align-center flex-between">
             <span>立即开始</span>
             <img src="../../assets/images/swiper/vector.svg" alt="">
