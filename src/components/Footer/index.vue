@@ -74,14 +74,14 @@ export default {
       platformList: [{
           image: require("../../assets/images/public/douyin-icon.png"),
           url: "https://www.douyin.com/user/MS4wLjABAAAA6JtigcRTN5A4yY-IOqimKbbJcfGrobP-avfNbV_T5veCK8eI8nyQ24zgBAgzFt_1",
-          qrCode: require("../../assets/image/footer/douyin.jpg"),
+          qrCode: require("../../assets/image/footer/douyin-ly.jpg"),
           title: "抖音",
           showQRcode: false
         },
         {
           image: require("../../assets/images/public/weixin-icon.png"),
           url: "https://work.weixin.qq.com/kfid/kfc9bc28e0f847fbdb1",
-          qrCode: require("../../assets/image/footer/wechat.jpg"),
+          qrCode: require("../../assets/image/footer/wechat-ly.jpg"),
           title: "公众号",
           showQRcode: false
         }
