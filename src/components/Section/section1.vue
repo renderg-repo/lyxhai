@@ -199,15 +199,15 @@ export default {
       return (item) => {
         let color;
         if (item.mark == "NEW") {
-          color = "error-color";
+          color = "new-color";
         } else if (item.mark == "独家") {
-          color = "error-color";
+          color = "new-color";
         } else if (item.mark == "推荐") {
-          color = "main-color";
+          color = "recommend-color";
         } else if (item.mark == "特价") {
           color = "warning-color"
         }else {
-          color = "main-color";
+          color = "recommend-color";
         }
         return color;
       }
