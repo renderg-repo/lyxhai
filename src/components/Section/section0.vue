@@ -2,7 +2,7 @@
 <div class="example flex-align-center flex-column-direction">
   <h1 class="section-title section-title-0">开箱即用 快速部署AI应用</h1>
   <p class="section-description">预装环境，一键部署，专注模型开发。热门主流大模型 AI 程序快速部署。</p>
-  <div class="example-content flex-align-center mb40">
+  <div class="example-content flex-between flex-align-center mb40">
     <div class="example-item flex-align-center" @mouseenter="handleMouse(index, true)" @mouseleave="handleMouse(index, false)" v-for="(item, index) in exampleList" :key="index">
       <img class="example-img" :src="item.image" alt="">
       <div class="example-img-mask"  v-if="item.showBtn">

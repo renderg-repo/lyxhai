@@ -8,15 +8,17 @@
   <div class="software-content flex-align-center flex-between flex-wrap">
     <div 
       v-for="(item, index) in softwareList" :key="index" 
-      class="software-item">
-      <div class="software-img flex-align-center flex-center">
-        <el-image :src="item.image" alt="" :lazy="true">
-          <div slot="placeholder" class="image-slot">
-            <img :src="item.loadImg" alt="">
-          </div>
-        </el-image>
+      class="software-item flex-center">
+      <div>
+        <div class="software-img flex-align-center flex-center">
+          <el-image :src="item.image" alt="" :lazy="true">
+            <div slot="placeholder" class="image-slot">
+              <img :src="item.loadImg" alt="">
+            </div>
+          </el-image>
+        </div>
+        <p class="software-title">{{ item.title }}</p>
       </div>
-      <p class="software-title">{{ item.title }}</p>
     </div>
   </div>
 </div>
@@ -72,11 +74,11 @@ export default {
           loadImg: require('../../assets/image/index/software/tensorFlow.svg'),
           title: 'TensorFlow'
         },
-        {
-          image: require('../../assets/image/index/software/TensorRT.svg'),
-          loadImg: require('../../assets/image/index/software/TensorRT.svg'),
-          title: 'TensorRT'
-        },
+        // {
+        //   image: require('../../assets/image/index/software/TensorRT.svg'),
+        //   loadImg: require('../../assets/image/index/software/TensorRT.svg'),
+        //   title: 'TensorRT'
+        // },
         {
           image: require('../../assets/image/index/software/GLM.svg'),
           loadImg: require('../../assets/image/index/software/GLM.svg'),
@@ -117,11 +119,11 @@ export default {
           loadImg: require('../../assets/image/index/software/MuseTalk.svg'),
           title: 'Muse Talk'
         },
-        {
-          image: require('../../assets/image/index/software/ChatTTS.svg'),
-          loadImg: require('../../assets/image/index/software/ChatTTS.svg'),
-          title: 'ChatTTS'
-        },
+        // {
+        //   image: require('../../assets/image/index/software/ChatTTS.svg'),
+        //   loadImg: require('../../assets/image/index/software/ChatTTS.svg'),
+        //   title: 'ChatTTS'
+        // },
       ]
     }
   },

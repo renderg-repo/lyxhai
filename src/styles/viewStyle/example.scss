@@ -11,17 +11,18 @@
 .example-item {
   position: relative;
   margin-bottom: 0;
-  margin-right: 62px;
+  // margin-right: 62px;
   &:last-child {
     margin-right: 0;
   } 
 }
 .example-content {
   margin-top: 72px;
+  width: 1300px;
 }
 .example-img {
-  width: 479px;
-  height: 359px;
+  width: 400px;
+  // height: 359px;
 }
 .example-img-mask {
   width: 100%;
