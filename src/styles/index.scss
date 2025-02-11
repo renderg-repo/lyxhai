@@ -27,6 +27,8 @@ body {
   justify-content: center;
   align-items: flex-start;
   height: 100vh;
+
+  // zoom: 0.8;
   // background-color: #0D131E;
 }
 label {
@@ -329,10 +331,11 @@ h4 {
   --white-color-15: rgba(255, 255, 255, 0.15);
   --white-color-8: rgba(255, 255, 255, 0.08);
   --white-color-6: rgba(255, 255, 255, 0.05);
+  --black-color-85: rgba(0, 0, 0, 0.85);
   --basic-text-color: #404040;
   --light-text-color: rgba(255, 255, 255, 0.45);
-  --light-bg: #1D222A;
-  --dark-bg: #0B1320;
+  --light-bg: #e4f0fd;
+  --dark-bg: #0e0e0f;
   --dividing-line-color: #26303E;
   --dividing-line-hover-color: #1A2940;
 }
@@ -415,7 +418,7 @@ input[type="number"] {
   min-width: 60px !important;
 }
 .el-message--error {
-  background-color: var(--light-bg) !important; 
+  background-color: var(--dark-bg) !important; 
   box-shadow: 0px 3px 6px 0px rgba(0,0,0,0.48), 0px 6px 16px 0px rgba(0,0,0,0.32), 0px 9px 28px 0px rgba(0,0,0,0.2);
 }
 .el-message__content {
@@ -429,12 +432,12 @@ input[type="number"] {
   margin: 0;
   cursor: pointer !important;
   color: var(--basic-text-color);
-  background-color: var(--main-color);
+  // background-color: var(--main-color);
   font-size: 14px;
   text-align: center;
   &:hover {
     color: #fff;
-    background-color: var(--main-hover-color);
+    // background-color: var(--main-hover-color);
   }
 }
 .start-btn {

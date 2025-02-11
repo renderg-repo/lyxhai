@@ -129,7 +129,7 @@
 
 .mirror-el-skeleton {
   .el-skeleton.is-animated .el-skeleton__item {
-    background: linear-gradient(90deg, #0d1625 15%, #0d1625 37%, #101d30 60%);
+    // background: linear-gradient(90deg, #0d1625 15%, #0d1625 37%, #101d30 60%);
     background-size: 400% 100%;
     -webkit-animation: el-skeleton-loading 1.4s ease infinite;
     animation: el-skeleton-loading 1.4s ease infinite;
@@ -211,7 +211,7 @@
   font-size: 14px !important;
   font-weight: 400 !important;
   line-height: 20px !important;
-  color: var(--white-color-85) !important;
+  color: var(--black-color-85) !important;
   // font-family: Source Han Sans-Regular !important;
 
   div {
@@ -262,7 +262,7 @@
       }
 
       .dialog-item-author{
-        color: var(--white-color-85);
+        color: var(--black-color-85);
         font-size: 14px;
         line-height: 20px;
         font-weight: 400;
@@ -275,24 +275,24 @@
 
   .dialog-item-detail {
     margin-top: 12px;
-    color: var(--white-color-85);
+    color: var(--black-color-85);
     .desc-text {
       margin-top: 12px;
-      color: $grayTextColor;
+      color: rgba(0, 0, 0, 0.45);
     }
   }
 
   .dialog-item-footer {
     width: 100%;
     height: 36px;
-    background: var(--dividing-line-color);
+    background: #3479FF;
     border-radius: 8px;
-    color: var(--white-color-85);
+    color: #fff;
     cursor: pointer;
     font-family: Source Han Sans-Medium;
     &:hover {
       color: #fff;
-      background: var(--dividing-line-hover-color);
+      // background: var(--dividing-line-hover-color);
     }
   }
 }

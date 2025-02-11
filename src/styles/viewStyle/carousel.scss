@@ -56,7 +56,7 @@
   position: absolute;
   top: 48%;
   right: 120px;
-  transform: translate(0, -50%);
+  transform: translate(0, -50%) scale(0.8);
   z-index: 1;
 }
 .swiper-description {
@@ -73,36 +73,36 @@
   font-weight: 700;
   line-height: 59px;
   letter-spacing: 2.1px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 .swiper-subhead {
-  font-size: 80px;
+  font-size: 64px;
   color: var(--active-color);
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 .swiper-desc {
-  font-size: 40px;
+  font-size: 32px;
   color: #7A7A7A;
   letter-spacing: 0.7px;
   font-family: PingFang SC-Semibold;
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 }
 .swiper-start-btn{
   width: 331px;
   border-radius: 100px;
   background: linear-gradient(270deg, #89CAFF 0%, #6FADFF 32.1%, #3771FF 100%);
   box-sizing: border-box;
-  padding: 16px 0 16px 50px;
-  font-size: 48px;
+  padding: 16px 0 ;
+  font-size: 38px;
   color: #fff;
   font-weight: 700;
 }
 .swiper-start-btn1 {
-  width: 75%;
+  width: 60%;
   padding: 25px 81px 25px 27px;
-  font-size: 54px;
-  margin-top: 100px;
+  font-size: 44px;
+  margin-top: 80px;
   color: #fff;
   font-weight: 600;
   letter-spacing: 16.2px;

@@ -8,7 +8,7 @@
           <img src="../../assets/images/swiper/swiper-icon.png" alt="">
         </div>
         <div class="swiper-description">
-          <h2 class="swiper-subhead" style="font-size: 90px; line-height: 120px;">专为AI而生的<br/>高性能云</h2>
+          <h2 class="swiper-subhead" style="font-size: 72px; line-height: 96px;">专为AI而生的<br/>高性能云</h2>
           <div @click="toPath" class="swiper-start-btn1 flex-align-center flex-between">
             <span>立即开始</span>
             <img src="../../assets/images/swiper/vector.svg" alt="">
@@ -18,10 +18,10 @@
       <el-carousel-item >
         <img src="../../assets/images/swiper/swiper-1.png" class="banner-img" />
         <div class="swiper-description">
-          <h2 class="swiper-title">释放计算潜力</h2>
-          <p class="swiper-subhead ft80">GPU云平台助力创新</p>
+          <h2 class="swiper-title" style="font-size: 50px;">释放计算潜力</h2>
+          <p class="swiper-subhead">GPU云平台助力创新</p>
           <p class="swiper-desc">轻松获取强大计算资源，满足深度学习、数据分析和图形渲染的各种需求</p>
-          <div class="swiper-start-btn" @click="toPath" >
+          <div class="swiper-start-btn flex-align-center flex-center" @click="toPath" >
             <span>立即开始</span>
             <i class="el-icon-arrow-right"></i>
           </div>
@@ -30,10 +30,10 @@
       <el-carousel-item >
         <img src="../../assets/images/swiper/swiper-2.png" class="banner-img" />
         <div class="swiper-description">
-          <h2 class="swiper-title" style="font-size: 64px;">RTX 4090 算力租赁</h2>
-          <p class="swiper-subhead" style="font-size: 90px;">低至1.76元/<span style="font-size: 50px;">卡/时</span> </p>
+          <h2 class="swiper-title" style="font-size: 50px;">RTX 4090 算力租赁</h2>
+          <p class="swiper-subhead" style="font-size: 64px;">低至1.76元/<span style="font-size: 50px;">卡/时</span> </p>
           <p class="swiper-desc">多款高性能GPU灵活供应，超值性价比 <br/>助力AI项目快速启动</p>
-          <div class="swiper-start-btn" @click="toPath" >
+          <div class="swiper-start-btn flex-align-center flex-center" @click="toPath" >
             <span>立即开始</span>
             <i class="el-icon-arrow-right"></i>
           </div>
