@@ -163,6 +163,7 @@
 
     .mirror-item-title {
       font-size: 16px;
+      max-width: 160px;
       color: var(--active-color);
       line-height: 22px;
       overflow: hidden;
@@ -185,6 +186,11 @@
     .tag-icon {
       margin-left: 6px;
       background-color: $mainBtnBg;
+      color: #fff;
+      font-size: 12px;
+      padding: 0 5px;
+      line-height: 20px;
+      border-radius: 5px;
     }
 
     .mirror-item-author{
