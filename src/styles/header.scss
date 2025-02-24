@@ -79,7 +79,7 @@
   color: #000;
   margin: 0;
   &:hover {
-    color: var(--white-color-60);
+    color: rgba(0,0,0,0.85);
   }
 }
 .drawer-box.el-drawer {
